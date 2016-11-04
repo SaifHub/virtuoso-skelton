@@ -8,7 +8,7 @@ import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
  */
 
 
-public class BrowserTest extends SeleniumTest {
+public class RunBrowser extends SeleniumTest {
 
     @Test
     public void launchBrowser () {

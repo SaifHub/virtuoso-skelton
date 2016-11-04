@@ -1,8 +1,8 @@
 package example.runner;
 
-import example.belly.RunBellyTest;
-import example.browser.BrowserTest;
-import example.wikipedia.RunWikipediaTest;
+import example.belly.RunBelly;
+import example.browser.RunBrowser;
+import example.wikipedia.RunWikipedia;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runners.Suite;
@@ -10,9 +10,9 @@ import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBellyTest.class, RunWikipediaTest.class, BrowserTest.class})
+@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunBrowser.class})
 
-public class RunExamples extends SuiteRunner{
+public class RunAllExamples extends SuiteRunner{
 
     @BeforeClass
     public final static void setup() {

@@ -12,5 +12,5 @@ import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
         format = {"pretty", "html:virtuoso-test-results/wikipedia", "json:virtuoso-test-results/wikipedia.json"}
     )
 
-    public class RunWikipediaTest {
+    public class RunWikipedia {
     }

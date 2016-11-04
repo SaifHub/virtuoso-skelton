@@ -12,5 +12,5 @@ import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
         , tags = {"@growl, @slient"}
     )
 
-    public class RunBellyTest {
+    public class RunBelly {
     }
