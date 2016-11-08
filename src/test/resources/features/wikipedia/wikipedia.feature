@@ -8,7 +8,7 @@ Feature: Wikipedia searching
 
   Scenario Outline:
     When searching for "<Term>"
-    Then the returned page contains the "<this-should-fail>" header
+    Then the returned page contains the "<Term>" header
 
     Examples:
       | Term        |
