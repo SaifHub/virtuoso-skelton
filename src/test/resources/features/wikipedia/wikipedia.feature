@@ -15,3 +15,4 @@ Feature: Wikipedia searching
       | Computing   |
       | Japan       |
       | Apple				|
+      | TEST				|
