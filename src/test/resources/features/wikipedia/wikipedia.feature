@@ -14,3 +14,4 @@ Feature: Wikipedia searching
       | Term        |
       | Computing   |
       | Japan       |
+      | Donald Trump|
