@@ -13,7 +13,7 @@ public class GovHomePage extends BasePage {
     private static final PageElement GO_BUTTON = new PageElement(PageElement.Type.CLASS_NAME,
         "submit", "Gov Home Page: Go Button");
     private static final PageElement SEARCH_INPUT_TEXT = new PageElement(PageElement.Type.ID,
-        "search-input", "Gov Home Page: Search Input Text");
+        "search-main", "Gov Home Page: Search Main Text");
 
     public void setSearchInputText(String value) {
         pilot.sendKeys(SEARCH_INPUT_TEXT, value);
