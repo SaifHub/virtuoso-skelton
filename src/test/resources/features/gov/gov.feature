@@ -13,3 +13,4 @@ Feature: Gov searching
     Examples:
       | government home-office    |
       | student finance			 			|
+      | visa											|
