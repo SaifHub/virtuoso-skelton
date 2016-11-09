@@ -1,8 +1,10 @@
-package example.homeoffice;
+package example.gov;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import example.gov.GovHomePage;
+import example.gov.GovHomeofficePage;
 import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
 
 
@@ -17,25 +19,25 @@ import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
  * to take advantage of Virtuoso capabilities and automatically
  * initialise the Selenium web driver as per the configuration properties.
  */
-public class HomeofficeStepDefinitions extends SeleniumTest {
+public class GovStepDefinitions extends SeleniumTest {
 
-    HomeofficeHomePage homeofficeHomePage;
-    HomeofficeComputingPage homeofficeComputingPage;
+    GovHomePage GovHomePage;
+    GovHomeofficePage GovHomeofficePage;
 
-    @Given("^the Wikipedia site is accessed$")
-    public void the_Homeoffice_site_is_accessed() throws Throwable {
-        homeofficeHomePage = HomeofficeHomePage.launch();
+    @Given("^the Gov site is accessed$")
+    public void the_Gov_site_is_accessed() throws Throwable {
+        GovHomePage = example.gov.GovHomePage.launch();
     }
 
     @When("^searching for \"(.*?)\"$")
     public void searching_for(String term) throws Throwable {
-    	homeofficeHomePage.setSearchInputText(term);
-        homeofficeComputingPage = homeofficeHomePage.clickGoButton();
+    	GovHomePage.setSearchInputText(term);
+        GovHomeofficePage = GovHomePage.clickGoButton();
     }
 
     @Then("^the returned page contains the \"(.*?)\" header$")
     public void the_returned_page_contains_the_header(String term) throws Throwable {
-        assertor.assertEquals("The returned page does not contain the header", term, homeofficeComputingPage.getFirstHeading());
+        assertor.assertEquals("The returned page does not contain the header", term, GovHomeofficePage.getFirstHeading());
     }
 }
 

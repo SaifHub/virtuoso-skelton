@@ -1,19 +1,15 @@
-Feature: Wikipedia searching
+Feature: Gov searching
   As a user
-  I want to use Wikipedia
+  I want to use Gov
   So that I find information on topics of interest
 
   Background:
-    Given the Wikipedia site is accessed
+    Given the Gov site is accessed
 
   Scenario Outline:
     When searching for "<Term>"
     Then the returned page contains the "<Term>" header
 
     Examples:
-      | Term        |
-      | Computing   |
-      | Japan       |
-      | Apple				|
-      
-
+      | government home-office    |
+      | student finance			 			|
