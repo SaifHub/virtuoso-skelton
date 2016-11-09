@@ -12,5 +12,5 @@ Feature: Wikipedia searching
 
     Examples:
       | Term        |
-      | Computing   |
+      | Consulting  |
       | Arsenal     |
