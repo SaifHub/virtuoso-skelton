@@ -3,3 +3,4 @@
 /target
 /virtuoso-test-results
 *.iml
+/bin/
