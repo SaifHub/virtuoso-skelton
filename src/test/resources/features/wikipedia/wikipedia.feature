@@ -13,4 +13,4 @@ Feature: Wikipedia searching
     Examples:
       | Term        |
       | Computing   |
-      | Japan       |
+      | Donald Trump |
