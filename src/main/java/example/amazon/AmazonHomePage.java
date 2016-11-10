@@ -7,7 +7,7 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 
 /**
  * @author ABDUL SAIF
- * Created - 10/11/2016 - 08/09/2016
+ * Created - 10/11/2016
  *
  */
 
@@ -58,7 +58,6 @@ public void TB()
 
 public void Basket()
 {
-	//pilot.sendKeys(BASKET, basket + Keys.RETURN);
 	pilot.click(BASKET);
 }
 
