@@ -11,6 +11,6 @@ Feature: Wikipedia searching
     Then the returned page contains the "<Term>" header
 
     Examples:
-      | Term        |
+    | Term        |
       | Computing   |
       | Donald Trump |
