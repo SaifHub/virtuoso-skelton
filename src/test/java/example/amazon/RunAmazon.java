@@ -7,7 +7,10 @@ import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
 
 @RunWith(IntegratedCucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/Amazon")
+@CucumberOptions(
+        features = "src/test/resources/features/amazon",
+        format = "pretty"
+)
 
 public class RunAmazon
 {
