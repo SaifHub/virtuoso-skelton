@@ -4,6 +4,7 @@ import example.belly.RunBelly;
 import example.browser.RunBrowser;
 import example.gov.RunGov;
 import example.wikipedia.RunWikipedia;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runners.Suite;

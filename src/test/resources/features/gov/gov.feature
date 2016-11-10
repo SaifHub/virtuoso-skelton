@@ -11,5 +11,5 @@ Feature: Gov searching
     Then the returned page contains the "<Term>" header
 
     Examples:
-    	| Term 	|	
-      | visa    |
+    	| finance 		|	
+      | visa    		|
