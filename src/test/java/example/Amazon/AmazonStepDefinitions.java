@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import example.Amazon.AmazonHomePage;
 import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
+import static java.lang.Thread.sleep;
 
 public class AmazonStepDefinitions extends SeleniumTest{
 
@@ -20,7 +21,7 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@When("^I search for \"([^\"]*)\"$")
 	public void i_search_for(String arg1) throws Throwable {
 		amazonHomePage.EnterSearch(arg1);
-
+		sleep(5000);
 	}
 
 	@When("^I then select the item I wish to buy$")
