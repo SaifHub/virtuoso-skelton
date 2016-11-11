@@ -2,7 +2,6 @@ package amazon;
 
 import org.openqa.selenium.Keys;
 
-import example.homeoffice.copy.HomeofficeComputingPage;
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.element.PageElement;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
