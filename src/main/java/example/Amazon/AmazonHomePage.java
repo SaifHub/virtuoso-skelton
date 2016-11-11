@@ -19,7 +19,6 @@ public class AmazonHomePage extends BasePage
 		return new AmazonHomePage();
 	}
 	
-	
 	// Constructors
 
 
