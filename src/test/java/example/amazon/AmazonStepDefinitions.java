@@ -1,6 +1,5 @@
 package example.amazon;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,7 +15,7 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	    amazonHomePage = AmazonHomePage.launch();
 	}
 
-	@Given("^and page has opened$")
+	@Given("^page has opened$")
 	public void and_page_has_opened() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	}

@@ -6,10 +6,6 @@ Feature: Gov searching
   Background:
     Given the Gov site is accessed
 
-  Scenario Outline:
-    When searching for "<Term>"
-    Then the returned page contains the "<Term>" header
-
-    Examples:
-    	| finance 		|	
-      | visa    		|
+  Scenario:
+    When searching for "finance"
+    Then the returned page contains the "finance" header
