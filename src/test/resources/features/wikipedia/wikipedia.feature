@@ -11,9 +11,9 @@ Feature: Wikipedia searching
     Then the returned page contains the "<Term>" header
 
     Examples:
-      | Term        |
-      | Computing   |
-      | Japan       |
-      | Apple				|
+      | Term      	   |
+      | Computing 	   |
+      | United Kingdom |
+      | Apple				 	 |
       
 
