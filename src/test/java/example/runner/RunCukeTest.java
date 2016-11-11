@@ -1,5 +1,6 @@
 package example.runner;
 
+import example.Amazon.RunAmazon;
 import example.belly.RunBelly;
 import example.wikipedia.RunWikipedia;
 import org.junit.AfterClass;
@@ -9,7 +10,7 @@ import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class})
+@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class})
 
 public class RunCukeTest extends SuiteRunner{
 
