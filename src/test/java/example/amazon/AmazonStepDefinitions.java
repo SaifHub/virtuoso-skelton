@@ -45,11 +45,11 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	    sleep(5000);
 	}
 	
-	@Then("^I select \"([^\"]*)\"$")
+	/*@Then("^I select \"([^\"]*)\"$")
 	public void i_select(String arg1) throws Throwable {
 	    amazonHomePage.TB();
 	    sleep(5000);
-	}
+	}*/
 	
 	@Then("^I add \"([^\"]*)\" into basket$")
 	public void i_add_into_basket(String arg1) throws Throwable {
