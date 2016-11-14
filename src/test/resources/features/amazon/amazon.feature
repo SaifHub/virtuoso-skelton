@@ -1,6 +1,6 @@
 Feature: Amazon test with graduates
 
-  Scenario Outline: I want to buy an amazon echo from amazon.co.uk
+  Scenario Outline: I want to buy something from amazon.co.uk
     Given I have visited amazon.co.uk
     When I search for "<search>"
     And I select the link "<link>"
