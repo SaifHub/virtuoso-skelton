@@ -10,5 +10,5 @@ Feature: Amazon test with graduates
   Examples:
     | search        | link                            | subtotal |
     | amazon echo   | Amazon Echo, Black              | £149.99  |
-    | fire tv stick | Fire TV Stick                   | £32.99   |
-    | fire tv stick | Fire TV Stick with Voice Remote | £42.70   |
+#    | fire tv stick | Fire TV Stick                   | £32.99   |
+#    | fire tv stick | Fire TV Stick with Voice Remote | £42.70   |
