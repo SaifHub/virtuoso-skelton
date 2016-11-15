@@ -8,7 +8,10 @@ import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
     @RunWith(IntegratedCucumber.class)
     @CucumberOptions(
         features = "src/test/resources/features/belly/belly.feature",
-        format = {"pretty", "html:virtuoso-test-results/belly", "json:virtuoso-test-results/belly.json"},
+        plugin = {
+                "pretty",
+                "json:virtuoso-test-results/belly.json"
+        },
         tags = {"@growl, @silent"},
         monochrome = false
 

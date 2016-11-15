@@ -69,21 +69,21 @@
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
                 </configuration>
-				 <executions>
-					<execution>
-					   <id>pre-unit-test</id>
-					   <goals>
-						  <goal>prepare-agent</goal>
-					   </goals>
-					</execution>
-					<execution>
-					   <id>post-unit-test</id>
-					   <phase>test</phase>
-					   <goals>
-						  <goal>report</goal>
-					   </goals>
-					</execution>
-				 </executions>
+                <executions>
+                    <execution>
+                        <id>pre-unit-test</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
 			</plugin>
         </plugins>
     </build>
