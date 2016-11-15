@@ -14,6 +14,7 @@
         <java-source.version>1.8</java-source.version>
         <java-target.version>1.8</java-target.version>
         <virtuoso.version>1.10.2</virtuoso.version>
+        <jacoco-maven-plugin.version>0.7.8-SNAPSHOT</jacoco-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -59,7 +60,13 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+               <groupId>org.jacoco</groupId>
+               <artifactId>jacoco-maven-plugin</artifactId>
+               <version>${jacoco-maven-plugin.version}</version>
+            </plugin>
         </plugins>
     </build>
+
 
 </project>
