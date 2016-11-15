@@ -20,7 +20,7 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@When("^I search for \"([^\"]*)\"$")
 	public void i_search_for(String arg1) throws Throwable {
 		amazonHomePage.AmazonSearch(arg1);
-		sleep (5000);
+		//sleep (5000);
 	}
 
 	@When("^I click the first result$")
