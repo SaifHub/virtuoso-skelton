@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+    	<jacoco-maven-plugin.version>0.7.8-SNAPSHOT</jacoco-maven-plugin.version>
         <maven.compiler.version>3.1</maven.compiler.version>
         <maven-assembly-plugin.version>2.5.3</maven-assembly-plugin.version>
         <java-source.version>1.8</java-source.version>
@@ -33,6 +34,11 @@
 
     <build>
         <plugins>
+        	<plugin>
+  				<groupId>org.jacoco</groupId>
+  				<artifactId>jacoco-maven-plugin</artifactId>
+ 				 <version>${jacoco-maven-plugin.version}</version>
+			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
