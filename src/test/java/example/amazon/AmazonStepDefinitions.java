@@ -28,7 +28,6 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@When("^I sort by \"([^\"]*)\"$")
 	public void i_sort_by(String arg1) throws Throwable {
 	    amazonHomePage.SortBy(arg1);
-	    sleep(5000);
 	}
 
 	@Then("^the first item is \"([^\"]*)\"$")
@@ -36,37 +35,31 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	    String checked = amazonHomePage.Check();
 	    //assertor.assertTrue("Check string " + checked + " contains " + arg1, checked.contains(arg1));
 	    System.out.println("Checked '" + checked + "'");
-	    sleep(5000);
 	}
 	
 	@Then("^I select item \"([^\"]*)\"$")
 	public void i_select_item(String arg1) throws Throwable {
 	    amazonHomePage.Select();
-	    sleep(5000);
 	}
 	
 	/*@Then("^I select \"([^\"]*)\"$")
 	public void i_select(String arg1) throws Throwable {
 	    amazonHomePage.TB();
-	    sleep(5000);
 	}*/
 	
 	@Then("^I add \"([^\"]*)\" into basket$")
 	public void i_add_into_basket(String arg1) throws Throwable {
 		amazonHomePage.Basket();
-		sleep(5000);
 	}
 	
 	@Then("^I checkout the basket$")
 	public void i_checkout_the_basket() throws Throwable {
 		amazonHomePage.Checkout();
-		sleep(5000);
 	}
 	
 	@Then("^I decline breakdown cover$")
 	public void i_decline_breakdown() throws Throwable {
 		amazonHomePage.Nothanks();
-		sleep(5000);
 	}
 	
 	@Then("^I check sign in$")
