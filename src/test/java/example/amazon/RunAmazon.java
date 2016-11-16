@@ -1,4 +1,4 @@
-package example.Amazon;
+package example.amazon;
 
 import org.junit.runner.RunWith;
 

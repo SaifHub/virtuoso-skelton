@@ -1,6 +1,6 @@
 package example.runner;
 
-import example.Amazon.RunAmazon;
+import example.amazon.RunAmazon;
 import example.belly.RunBelly;
 import example.wikipedia.RunWikipedia;
 import org.junit.AfterClass;

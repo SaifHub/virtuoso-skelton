@@ -1,6 +1,6 @@
 package example.runner;
 
-import example.Amazon.RunAmazon;
+import example.amazon.RunAmazon;
 import example.belly.RunBelly;
 import example.browser.RunBrowser;
 import example.wikipedia.RunWikipedia;
