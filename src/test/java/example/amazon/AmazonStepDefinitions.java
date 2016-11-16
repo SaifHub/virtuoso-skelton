@@ -40,6 +40,7 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@Then("^I select item \"([^\"]*)\"$")
 	public void i_select_item(String arg1) throws Throwable {
 	    amazonHomePage.Select();
+	    sleep(5000);
 	}
 	
 	/*@Then("^I select \"([^\"]*)\"$")
