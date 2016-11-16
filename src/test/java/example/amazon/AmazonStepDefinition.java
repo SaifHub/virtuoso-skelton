@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
  */
 public class AmazonStepDefinition extends SeleniumTest {
 
-    AmazonHomePage amazonHomePage;
+    private AmazonHomePage amazonHomePage;
 
     @Given("^I have visited amazon\\.co\\.uk$")
     public void i_have_visited_amazon_co_uk() throws Throwable {
