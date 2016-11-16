@@ -11,9 +11,7 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
  */
 public class HomePage extends BasePage{
 
-    /**
-     * Class comment...
-     */
+
     public static HomePage launch(String URL) {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new HomePage();

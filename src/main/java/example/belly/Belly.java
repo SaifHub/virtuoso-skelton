@@ -13,9 +13,7 @@ public class Belly {
         public void eat(int cukes) {
             this.cukes = cukes;
         }
-        /**
-         * Class comment...
-         */
+
         public String getSound(int waitingTime) {
             if (cukes > 41 && waitingTime >= 1) {
                 return "growl";

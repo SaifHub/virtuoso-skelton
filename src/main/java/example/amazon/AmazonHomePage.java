@@ -11,9 +11,19 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 
 public class AmazonHomePage extends BasePage
 {
-	// Attributes
+	  /**
+	   * Class comment...
+	   */
 	private static final PageElement SEARCH = PageElement.byId("twotabsearchtextbox","");
+	
+	  /**
+	   * Class comment...
+	   */
 	private static final PageElement ITEM = PageElement.byXpath("//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/a/h2","");
+	
+	  /**
+	   * Class comment...
+	   */
 	private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "");
 
 	  /**
