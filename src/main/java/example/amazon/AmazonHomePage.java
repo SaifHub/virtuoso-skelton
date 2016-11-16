@@ -12,22 +12,22 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 public class AmazonHomePage extends BasePage
 {
 	  /**
-	   * Class comment...
+	   * Method comment...
 	   */
 	private static final PageElement SEARCH = PageElement.byId("twotabsearchtextbox","");
 	
 	  /**
-	   * Class comment...
+	   * Method comment...
 	   */
 	private static final PageElement ITEM = PageElement.byXpath("//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/a/h2","");
 	
 	  /**
-	   * Class comment...
+	   * Method comment...
 	   */
 	private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "");
 
 	  /**
-	   * Class comment...
+	   * Method comment...
 	   */
 	public static AmazonHomePage launch()
 	{
@@ -36,7 +36,7 @@ public class AmazonHomePage extends BasePage
 	}
 
 	  /**
-	   * Class comment...
+	   * Method comment...
 	   */
 	public void enterSearch(String x)
 	{
@@ -44,14 +44,16 @@ public class AmazonHomePage extends BasePage
 	}
 
 	  /**
-	   * Class comment...
+	   * Method comment...
 	   */
 	public void selectItem()
 	{
 		pilot.click(ITEM);
 	}
 
-
+	  /**
+	   * Method comment...
+	   */
 	public void addItem()
 	{
 		pilot.click(BASKET);
