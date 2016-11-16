@@ -28,7 +28,6 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@When("^I sort by \"([^\"]*)\"$")
 	public void i_sort_by(String arg1) throws Throwable {
 	    amazonHomePage.SortBy(arg1);
-	    sleep(5000);
 	}
 
 	@Then("^the first item is \"([^\"]*)\"$")
