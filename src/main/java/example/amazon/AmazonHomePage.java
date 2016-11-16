@@ -26,20 +26,21 @@ public class AmazonHomePage extends BasePage
 	   */
 	private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "");
 
-	  /**
-	   * Method comment...
-	   */
+
 	public static AmazonHomePage launch()
 	{
+		/**
+		   * Method comment...
+		   */
 		ExecutionContext.getInstance().getPilot().navigateTo("https://www.amazon.co.uk/");
 		return new AmazonHomePage();
 	}
 
-	  /**
-	   * Method comment...
-	   */
 	public void enterSearch(String x)
 	{
+		/**
+		   * Method comment...
+		   */
 		pilot.sendKeys(SEARCH, x+Keys.RETURN);
 	}
 
