@@ -4,7 +4,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import example.Amazon.AmazonHomePage;
+import example.amazon.AmazonHomePage;
 import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
 	
 public class AmazonStepDefinitions extends SeleniumTest

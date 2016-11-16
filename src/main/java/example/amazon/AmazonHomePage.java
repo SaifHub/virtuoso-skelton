@@ -1,4 +1,4 @@
-package example.Amazon;
+package example.amazon;
 
 import org.openqa.selenium.Keys;
 
