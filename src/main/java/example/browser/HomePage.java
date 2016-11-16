@@ -6,19 +6,29 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 
-
+/**
+ * Demo class.
+ */
 public class HomePage extends BasePage{
 
+    /**
+     * Class comment...
+     */
     public static HomePage launch(String URL) {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new HomePage();
     }
-
+    
+    /**
+     * Class comment...
+     */
     public void screenshot() {
         pilot.getScreenshot();
     }
 
-
+    /**
+     * Class comment...
+     */
     public void printCapabilities() {
         Capabilities caps = ((RemoteWebDriver)pilot.getWebDriver()).getCapabilities();
 
