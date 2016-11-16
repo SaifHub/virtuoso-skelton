@@ -1,6 +1,5 @@
 package example.amazon;
 	
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -19,17 +18,17 @@ public class AmazonStepDefinitions extends SeleniumTest
 
 	@When("^I search for an \"([^\"]*)\" of interest$")
 	public void i_search_for_an_of_interest(String arg1) throws Throwable {
-	    amazonHomePage.EnterSearch(arg1);
+	    amazonHomePage.enterSearch(arg1);
 	}
 
 	@When("^I select the \"([^\"]*)\" I wish to buy$")
 	public void i_select_the_I_wish_to_buy(String arg1) throws Throwable {
-	    amazonHomePage.SelectItem();
+	    amazonHomePage.selectItem();
 	}
 
 	@Then("^I add the \"([^\"]*)\" to my basket$")
 	public void i_add_the_to_my_basket(String arg1) throws Throwable {
-	    amazonHomePage.AddItem();
+	    amazonHomePage.addItem();
 	}
 	// Constructors
 

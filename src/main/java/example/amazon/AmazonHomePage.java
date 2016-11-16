@@ -1,10 +1,13 @@
 package example.amazon;
 
 import org.openqa.selenium.Keys;
-
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.element.PageElement;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
+
+/**
+ * Demo class.
+ */
 
 public class AmazonHomePage extends BasePage
 {
@@ -19,24 +22,19 @@ public class AmazonHomePage extends BasePage
 		return new AmazonHomePage();
 	}
 	
-	// Constructors
-
-
-	// Methods
-	
-	public void EnterSearch(String x)
+	public void enterSearch(String x)
 	{
 		pilot.sendKeys(SEARCH, x+Keys.RETURN);
 	}
 
 
-	public void SelectItem()
+	public void selectItem()
 	{
 		pilot.click(ITEM);
 	}
 
 
-	public void AddItem()
+	public void addItem()
 	{
 		pilot.click(BASKET);
 		
