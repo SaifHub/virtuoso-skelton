@@ -1,8 +1,71 @@
-image: kaiwinter/docker-java8-maven
+
+# @author: ABDUL SAIF
+# @date  : 14/11/2016-16/11/2016
+
+# stages essentially runs the 'test' and 'coverage' in order like method calling
+
 stages:
+  - SaifHub
+  - chrome
+  - firefox
+  - jenkins
+  - sonarqube
   - test
   - coverage
-test:
- script: "mvn clean test"
-coverage:
- script: "mvn jacoco:report"
+  - jira
+  - confluence
+
+  test:
+    script: "mvn clean test"
+  coverage:
+    script: "mvn jacoco:report"
+
+  #Run Docker, Java and Maven
+  image: kaiwinter/docker-java8-maven
+
+  #Run Selenium Hub
+  Saifhub:
+    hostname: selenium_hub
+    container_name: SaifHub
+    image: selenium/hub
+    ports:
+      - 4444:4444
+
+  #Run Google Chrome
+  chrome:
+    container_name: SaifChrome
+    image: selenium/node-chrome
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=Saifhub
+      - HUB_PORT_4444_TCP_PORT=4444
+
+  #Run Mozilla Firefox
+  firefox:
+    container_name: SaifFirefox
+    image: selenium/node-firefox
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=Saifhub
+      - HUB_PORT_4444_TCP_PORT=4444
+
+  #Run Jenkins
+  jenkins:
+    container_name: SaifJenkin
+    image: jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - /Users/SaifAbdulMacbook/documents/jenkins:/var/jenkins_home
+
+  #Run SonarQube
+  sonarqube:
+   hostname: sonarqube
+   container_name: SaifSonarqube
+   image: sonarqube
+   ports:
+     - 9000:9000
+     - 9092:9092
+   volumes:
+     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/logs
+     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/extensions
+     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/data
