@@ -26,35 +26,34 @@ public class AmazonHomePage extends BasePage
 	   */
 	private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "");
 
-
+	/**
+	* @param value ...
+	*/
 	public static AmazonHomePage launch()
 	{
-		/**
-		   * Method comment...
-		   */
 		ExecutionContext.getInstance().getPilot().navigateTo("https://www.amazon.co.uk/");
 		return new AmazonHomePage();
 	}
-
+	
+	/**
+	* @param value ...
+	*/
 	public void enterSearch(String x)
 	{
-		/**
-		   * Method comment...
-		   */
 		pilot.sendKeys(SEARCH, x+Keys.RETURN);
 	}
 
-	  /**
-	   * Method comment...
-	   */
+	 /**
+	 * @param value ...
+	 */
 	public void selectItem()
 	{
 		pilot.click(ITEM);
 	}
 
-	  /**
-	   * Method comment...
-	   */
+	/**
+	* @param value ...
+	*/
 	public void addItem()
 	{
 		pilot.click(BASKET);
