@@ -13,10 +13,10 @@ stages:
   - coverage
   - jira
   - confluence
-  test:
-    script: "mvn clean test"
-  coverage:
-    script: "mvn jacoco:report"
+test:
+ script: "mvn clean test"
+coverage:
+ script: "mvn jacoco:report"
 
   #Run Selenium Hub
   Saifhub:
@@ -64,3 +64,17 @@ stages:
      - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/logs
      - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/extensions
      - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/data
+
+  #Run Jira
+  jira:
+    container_name: SaifJira
+    image: mhubig/atlassian-jira
+    volumes:
+      - /Users/SaifAbdulMacbook/desktop/home_office/jira:/opt/jira-home
+
+  #Run Confluence
+  confluence:
+    container_name: SaifConfluence
+    image: mhubig/atlassian-confluence
+    volumes:
+      - /Users/SaifAbdulMacbook/desktop/home_office/confluence:/opt/confluence-home
