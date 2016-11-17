@@ -15,16 +15,16 @@ public class WikipediaHomePage extends BasePage {
     private static final PageElement SEARCH_INPUT_TEXT = new PageElement(PageElement.Type.ID,
         "searchInput", "Wikipedia Home Page: Search Input Text");
 
-    public void setSearchInputText(String value) {
+    protected void setSearchInputText(String value) {
         pilot.sendKeys(SEARCH_INPUT_TEXT, value);
     }
 
-    public WikipediaComputingPage clickGoButton() {
+    protected WikipediaComputingPage clickGoButton() {
         pilot.click(GO_BUTTON);
         return new WikipediaComputingPage();
     }
 
-    public static WikipediaHomePage launch() {
+    protected static WikipediaHomePage launch() {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new WikipediaHomePage();
     }
