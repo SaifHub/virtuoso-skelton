@@ -2,7 +2,6 @@ package example.browser;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -14,13 +13,12 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
  */
 public class HomePage extends BasePage{
 
-
+	Logger logger = Logger.getLogger(HomePage.class.getName());
+    
     protected static HomePage launch(String url) {
         ExecutionContext.getInstance().getPilot().navigateTo(url);
         return new HomePage();
     }
-    
-    Logger logger = Logger.getLogger(HomePage.class.getName());
     
     /**
      * Class comment...

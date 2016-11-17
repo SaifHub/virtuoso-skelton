@@ -5,8 +5,10 @@ import example.belly.RunBelly;
 import example.wikipedia.RunWikipedia;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.junit.runners.Suite;
 import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
+import static org.junit.Assert.*;
 
 import java.time.LocalDateTime;
 
@@ -24,4 +26,9 @@ public class RunCukeTest extends SuiteRunner{
     public final static void tearDown() {
         System.out.println(LocalDateTime.now() + ": Testing completed");
     }
+    
+    @Test
+	public void code() {
+		assertEquals(" "," ");
+	}  
 }
