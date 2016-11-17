@@ -4,6 +4,9 @@
 
 # stages essentially runs the 'test' and 'coverage' in order like method calling
 
+  #Run Docker, Java and Maven
+  image: kaiwinter/docker-java8-maven
+
 stages:
   - SaifHub
   - chrome
@@ -15,13 +18,13 @@ stages:
   - jira
   - confluence
 
+  #Run test (including script)
   test:
     script: "mvn clean test"
+
+  #Run coverage (including script)
   coverage:
     script: "mvn jacoco:report"
-
-  #Run Docker, Java and Maven
-  image: kaiwinter/docker-java8-maven
 
   #Run Selenium Hub
   Saifhub:
