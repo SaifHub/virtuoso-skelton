@@ -29,7 +29,7 @@ public class AmazonHomePage extends BasePage
 	/**
 	* @param value ...
 	*/
-	public static AmazonHomePage launch()
+	protected static AmazonHomePage launch()
 	{
 		ExecutionContext.getInstance().getPilot().navigateTo("https://www.amazon.co.uk/");
 		return new AmazonHomePage();
@@ -38,7 +38,7 @@ public class AmazonHomePage extends BasePage
 	/**
 	* @param value ...
 	*/
-	public void enterSearch(String x)
+	protected void enterSearch(String x)
 	{
 		pilot.sendKeys(SEARCH, x+Keys.RETURN);
 	}
