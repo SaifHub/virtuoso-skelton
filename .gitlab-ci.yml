@@ -15,7 +15,7 @@ version: '2'
 #                        Local Disk    :   Virtual Disk
 # Change volumes: /Users/XXXX/XXXX/XXXX:/var/jenkins_home
 # Where XXXX is insert your jenkins source folder.
-image: kaiwinter/docker-java8-maven
+
 stages:
   - Saifhub
   - chrome
@@ -26,6 +26,8 @@ stages:
   - confluence
   - test
   - coverage
+
+image: kaiwinter/docker-java8-maven
 test:
  script: "mvn clean test"
 coverage:
