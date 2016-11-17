@@ -1,8 +1,6 @@
 
 # @author: ABDUL SAIF
-# @date  : 14/11/2016-16/11/2016
-
-# stages essentially runs the 'test' and 'coverage' in order like method calling
+# @date  : 17/11/2016
 
 stages:
   - DJM
@@ -19,12 +17,8 @@ stages:
   #Run Docker, Java and Maven
   DJM:
     image: kaiwinter/docker-java8-maven
-
-  #Run test (including script)
   test:
     script: "mvn clean test"
-
-  #Run coverage (including script)
   coverage:
     script: "mvn jacoco:report"
 
