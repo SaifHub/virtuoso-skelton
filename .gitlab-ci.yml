@@ -22,10 +22,10 @@ stages:
   - firefox
   - jenkins
   - sonarqube
-  - test
-  - coverage
   - jira
   - confluence
+  - test
+  - coverage
 test:
  script: "mvn clean test"
 coverage:
