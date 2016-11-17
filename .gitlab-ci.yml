@@ -1,80 +1,93 @@
 
-# @author: ABDUL SAIF
-# @date  : 17/11/2016
+version: '2'
 
+# @author: ABDUL SAIF
+# @date  : 14/11/2016-15/11/2016
+
+# This YAML file Executes Docker and boots up the following:
+# Sonarqube, Jenkins, Selenium Hub, Jira, Confluence, Firefox and Chrome.
+
+# Use run command in terminal: docker-compose up -d
+# Check hosts: sudo nano /etc/hosts
+# Show hidden files: defaults write com.apple.finder AppleShowAllFiles YES,
+# Refresh Finder: killall finder
+
+#                        Local Disk    :   Virtual Disk
+# Change volumes: /Users/XXXX/XXXX/XXXX:/var/jenkins_home
+# Where XXXX is insert your jenkins source folder.
 image: kaiwinter/docker-java8-maven
 stages:
-  # - SaifHub
-  # - chrome
-  # - firefox
-  # - jenkins
-  # - sonarqube
+  - Saifhub
+  - chrome
+  - firefox
+  - jenkins
+  - sonarqube
   - test
   - coverage
-  # - jira
-  # - confluence
+  - jira
+  - confluence
 test:
  script: "mvn clean test"
 coverage:
  script: "mvn jacoco:report"
 
-  # #Run Selenium Hub
-  # Saifhub:
-  #   hostname: selenium_hub
-  #   container_name: SaifHub
-  #   image: selenium/hub
-  #   ports:
-  #     - 4444:4444
-  #
-  # #Run Google Chrome
-  # chrome:
-  #   container_name: SaifChrome
-  #   image: selenium/node-chrome
-  #   environment:
-  #     - HUB_PORT_4444_TCP_ADDR=Saifhub
-  #     - HUB_PORT_4444_TCP_PORT=4444
-  #
-  # #Run Mozilla Firefox
-  # firefox:
-  #   container_name: SaifFirefox
-  #   image: selenium/node-firefox
-  #   environment:
-  #     - HUB_PORT_4444_TCP_ADDR=Saifhub
-  #     - HUB_PORT_4444_TCP_PORT=4444
-  #
-  # #Run Jenkins
-  # jenkins:
-  #   container_name: SaifJenkin
-  #   image: jenkins
-  #   ports:
-  #     - 8080:8080
-  #     - 50000:50000
-  #   volumes:
-  #     - /Users/SaifAbdulMacbook/documents/jenkins:/var/jenkins_home
-  #
-  # #Run SonarQube
-  # sonarqube:
-  #  hostname: sonarqube
-  #  container_name: SaifSonarqube
-  #  image: sonarqube
-  #  ports:
-  #    - 9000:9000
-  #    - 9092:9092
-  #  volumes:
-  #    - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/logs
-  #    - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/extensions
-  #    - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/data
-  #
-  # #Run Jira
-  # jira:
-  #   container_name: SaifJira
-  #   image: mhubig/atlassian-jira
-  #   volumes:
-  #     - /Users/SaifAbdulMacbook/desktop/home_office/jira:/opt/jira-home
-  #
-  # #Run Confluence
-  # confluence:
-  #   container_name: SaifConfluence
-  #   image: mhubig/atlassian-confluence
-  #   volumes:
-  #     - /Users/SaifAbdulMacbook/desktop/home_office/confluence:/opt/confluence-home
+  #Run Selenium Hub
+  Saifhub:
+    hostname: selenium_hub
+    container_name: SaifHub
+    image: selenium/hub
+    ports:
+      - 4444:4444
+
+  #Run Google Chrome
+  chrome:
+    container_name: SaifChrome
+    image: selenium/node-chrome
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=Saifhub
+      - HUB_PORT_4444_TCP_PORT=4444
+
+  #Run Mozilla Firefox
+  firefox:
+    container_name: SaifFirefox
+    image: selenium/node-firefox
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=Saifhub
+      - HUB_PORT_4444_TCP_PORT=4444
+
+  #Run Jenkins
+  jenkins:
+    container_name: SaifJenkin
+    image: jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - /Users/SaifAbdulMacbook/documents/jenkins:/var/jenkins_home
+
+  #Run SonarQube
+  sonarqube:
+   hostname: sonarqube
+   container_name: SaifSonarqube
+   image: sonarqube
+   ports:
+     - 9000:9000
+     - 9092:9092
+   volumes:
+     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/logs
+     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/extensions
+     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/data
+
+  #Run Jira
+  jira:
+    container_name: SaifJira
+    image: mhubig/atlassian-jira
+    volumes:
+      - /Users/SaifAbdulMacbook/desktop/home_office/jira:/opt/jira-home
+
+  #Run Confluence
+  confluence:
+    container_name: SaifConfluence
+    image: mhubig/atlassian-confluence
+    volumes:
+      - /Users/SaifAbdulMacbook/desktop/home_office/confluence:/opt/confluence-home
