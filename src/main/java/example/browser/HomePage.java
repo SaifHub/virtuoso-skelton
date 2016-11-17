@@ -15,10 +15,12 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 public class HomePage extends BasePage{
 
 
-    protected static HomePage launch(String URL) {
-        ExecutionContext.getInstance().getPilot().navigateTo(URL);
+    protected static HomePage launch(String url) {
+        ExecutionContext.getInstance().getPilot().navigateTo(url);
         return new HomePage();
     }
+    
+    Logger logger = Logger.getLogger(HomePage.class.getName());
     
     /**
      * Class comment...
@@ -44,6 +46,4 @@ public class HomePage extends BasePage{
         String useragent = (String)js.executeScript("return navigator.userAgent;");
         logger.log(Level.INFO,"User Agent is "+useragent);
     }
-    
-    Logger logger = Logger.getLogger(HomePage.class.getName());
 }
