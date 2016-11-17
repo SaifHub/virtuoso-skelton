@@ -4,10 +4,8 @@
 
 # stages essentially runs the 'test' and 'coverage' in order like method calling
 
-  #Run Docker, Java and Maven
-  image: kaiwinter/docker-java8-maven
-
 stages:
+  - DJM
   - SaifHub
   - chrome
   - firefox
@@ -17,6 +15,10 @@ stages:
   - coverage
   - jira
   - confluence
+
+  #Run Docker, Java and Maven
+  DJM:
+    image: kaiwinter/docker-java8-maven
 
   #Run test (including script)
   test:
