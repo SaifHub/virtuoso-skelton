@@ -2,8 +2,8 @@
 # @author: ABDUL SAIF
 # @date  : 17/11/2016
 
+image: kaiwinter/docker-java8-maven
 stages:
-  - DJM
   - SaifHub
   - chrome
   - firefox
@@ -13,10 +13,6 @@ stages:
   - coverage
   - jira
   - confluence
-
-  #Run Docker, Java and Maven
-  DJM:
-    image: kaiwinter/docker-java8-maven
   test:
     script: "mvn clean test"
   coverage:
