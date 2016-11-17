@@ -24,14 +24,14 @@ stages:
   - sonarqube
   - jira
   - confluence
-  - test
-  - coverage
+  - job1
 
 image: kaiwinter/docker-java8-maven
-test:
- script: "mvn clean test"
-coverage:
- script: "mvn jacoco:report"
+
+job1:
+ script:
+   - "mvn clean test"
+   - "mvn jacoco:report"
 
   #Run Selenium Hub
   Saifhub:
