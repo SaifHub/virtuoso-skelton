@@ -32,8 +32,8 @@ job1:
  script:
   #  - "mvn clean test"
   #  - "mvn jacoco:report"
-   - "mvn install -B"
-   - "cat target/site/jacoco/index.html"
+   - mvn install -B
+   - cat target/site/jacoco/index.html
 
   #Run Selenium Hub
   Saifhub:
