@@ -24,9 +24,21 @@ stages:
   - sonarqube
   - jira
   - confluence
+  - docker
+  - maven
+  - java
   - job1
 
-image: kaiwinter/docker-java8-maven
+# image: kaiwinter/docker-java8-maven
+
+docker:
+  image: docker
+
+maven:
+  image: maven
+
+java:
+  image: java
 
 job1:
  script:
