@@ -40,9 +40,9 @@ java:
 maven:
   image: maven
   job1:
-   scripts:
-     - "mvn clean test"
-     - "mvn jacoco:report"
+   script: "mvn clean test"
+  job2:
+   script: "mvn jacoco:report"
     #  - "mvn install -B"
     #  - "cat target/site/jacoco/index.html"
 
