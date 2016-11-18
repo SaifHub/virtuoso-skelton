@@ -2,12 +2,12 @@ package example.runner;
 
 import example.amazon.RunAmazon;
 import example.belly.RunBelly;
-import example.gov.RunGov;
 import example.wikipedia.RunWikipedia;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.junit.runners.Suite;
+import static org.junit.Assert.*;
 import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
@@ -26,4 +26,9 @@ public class RunCukeTest extends SuiteRunner{
     public final static void tearDown() {
         System.out.println(LocalDateTime.now() + ": Testing completed");
     }
+    
+    @Test
+	public void code() {
+		assertEquals(" "," ");
+	}  
 }

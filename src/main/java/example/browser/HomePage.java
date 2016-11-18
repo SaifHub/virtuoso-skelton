@@ -1,5 +1,6 @@
 package example.browser;
 
+import java.util.logging.Logger;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -9,6 +10,8 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 
 public class HomePage extends BasePage{
 
+	Logger logger = Logger.getLogger(HomePage.class.getName());
+	
     public static HomePage launch(String URL) {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new HomePage();
