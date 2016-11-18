@@ -28,6 +28,7 @@ stages:
   - maven
   - java
   - job1
+  - job2
 
 # image: kaiwinter/docker-java8-maven
 
@@ -40,11 +41,9 @@ java:
 maven:
   image: maven
   job1:
-   script: "mvn clean test"
+   script: mvn clean test
   job2:
-   script: "mvn jacoco:report"
-    #  - "mvn install -B"
-    #  - "cat target/site/jacoco/index.html"
+    script: mvn jacoco:report
 
   #Run Selenium Hub
   Saifhub:
