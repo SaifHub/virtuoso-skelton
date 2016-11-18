@@ -31,47 +31,47 @@ protected static AmazonHomePage launch()
 	return new AmazonHomePage();
 }
 
-protected void AmazonSearch(String search)
+protected void amazonSearch(String search)
 {
 	pilot.sendKeys(SEARCH, search + Keys.RETURN);
 }
 
-protected void SortBy(String sort)
+protected void sortBy(String sort)
 {
 	pilot.selectValueFromField(SORTBY, sort);
 }
 
-protected String Check()
+protected String check()
 {
 	return pilot.getText(CHECK);
 }
 
-protected void Select()
+protected void select()
 {
 	pilot.click(CHECK);
 }
 
-protected void TB()
+protected void tb()
 {
 	pilot.click(TB);
 }
 
-protected void Basket()
+protected void basket()
 {
 	pilot.click(BASKET);
 }
 
-protected void Checkout()
+protected void checkOut()
 {
 	pilot.click(CHECKOUT);
 }
 
-protected void Nothanks()
+protected void noThanks()
 {
 	pilot.click(NOTHANKS);
 }
 
-protected String Signin()
+protected String signIn()
 {
 	return pilot.getText(SIGNIN);
 }
