@@ -45,10 +45,10 @@ public class AmazonStepDefinitions extends SeleniumTest{
 		amazonHomePage.basket();
 	}
 	
-	@Then("^I decline \"([^\"]*)\"$")
-	public void i_decline() throws Throwable {
-		amazonHomePage.decline();
-	}
+//	@Then("^I decline \"([^\"]*)\"$")
+//	public void i_decline() throws Throwable {
+//		amazonHomePage.decline();
+//	}
 	
 	@Then("^I checkout the basket$")
 	public void i_checkout_the_basket() throws Throwable {
