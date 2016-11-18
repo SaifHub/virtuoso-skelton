@@ -13,11 +13,12 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	public void i_have_visited_Amazon_website() throws Throwable {
 	    amazonHomePage = AmazonHomePage.launch();
 	}
-	
+
+	@Given("^page has opened$")
 	public void page_has_opened() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	}
-
+	
 	@When("^I search for \"([^\"]*)\"$")
 	public void i_search_for(String arg1) throws Throwable {
 	    amazonHomePage.amazonSearch(arg1);
