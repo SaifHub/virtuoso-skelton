@@ -4,7 +4,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
-import static java.lang.Thread.sleep;
 
 public class AmazonStepDefinitions extends SeleniumTest{
 	
@@ -27,14 +26,12 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@When("^I sort by \"([^\"]*)\"$")
 	public void i_sort_by(String arg1) throws Throwable {
 	    amazonHomePage.sortBy(arg1);
-	    sleep(5000);
 	}
 
 	@Then("^the first item is \"([^\"]*)\"$")
 	public void the_first_item_is(String arg1) throws Throwable {
 	    String checked = amazonHomePage.choose();
 	    System.out.println("Checked '" + checked + "'");
-	    sleep(5000);
 	}
 	
 	@Then("^I select item \"([^\"]*)\"$")
