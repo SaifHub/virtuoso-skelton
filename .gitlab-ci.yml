@@ -1,4 +1,5 @@
 image: kaiwinter/docker-java8-maven
+image: docker/selenium
 
 stages:
   - test
