@@ -17,13 +17,13 @@ import java.time.LocalDateTime;
 public class RunCukeTest extends SuiteRunner{
 
     @BeforeClass
-    protected final static void setup() {
+    public final static void setup() {
                 registerRunID("Running example tests");
         System.out.println(LocalDateTime.now() + ": Testing starting");
     }
 
     @AfterClass
-    protected final static void tearDown() {
+    public final static void tearDown() {
         System.out.println(LocalDateTime.now() + ": Testing completed");
     }
     
