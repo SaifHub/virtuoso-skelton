@@ -34,18 +34,17 @@ stages:
 docker:
   image: docker
 
-maven:
-  image: maven
-
 java:
   image: java
 
-job1:
- script:
-  #  - "mvn clean test"
-  #  - "mvn jacoco:report"
-   - "mvn install -B"
-   - "cat target/site/jacoco/index.html"
+maven:
+  image: maven
+  job1:
+   scripts:
+     - "mvn clean test"
+     - "mvn jacoco:report"
+    #  - "mvn install -B"
+    #  - "cat target/site/jacoco/index.html"
 
   #Run Selenium Hub
   Saifhub:
