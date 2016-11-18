@@ -14,16 +14,14 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	public void i_have_visited_Amazon_website() throws Throwable {
 	    amazonHomePage = AmazonHomePage.launch();
 	}
-
-	@Given("^page has opened$")
-	public void and_page_has_opened() throws Throwable {
+	
+	public void page_has_opened() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	}
 
 	@When("^I search for \"([^\"]*)\"$")
 	public void i_search_for(String arg1) throws Throwable {
 	    amazonHomePage.amazonSearch(arg1);
-	    //sleep(5000);
 	}
 
 	@When("^I sort by \"([^\"]*)\"$")
@@ -34,7 +32,7 @@ public class AmazonStepDefinitions extends SeleniumTest{
 
 	@Then("^the first item is \"([^\"]*)\"$")
 	public void the_first_item_is(String arg1) throws Throwable {
-	    String checked = amazonHomePage.check();
+	    String checked = amazonHomePage.choose();
 	    System.out.println("Checked '" + checked + "'");
 	    sleep(5000);
 	}
@@ -42,26 +40,27 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@Then("^I select item \"([^\"]*)\"$")
 	public void i_select_item(String arg1) throws Throwable {
 	    amazonHomePage.select();
-	    //sleep(5000);
 	}
 	
 	@Then("^I add \"([^\"]*)\" into basket$")
 	public void i_add_into_basket(String arg1) throws Throwable {
 		amazonHomePage.basket();
-	    //sleep(5000);
+	}
+	
+	@Then("^I decline \"([^\"]*)\"$")
+	public void i_decline() throws Throwable {
+		amazonHomePage.decline();
 	}
 	
 	@Then("^I checkout the basket$")
 	public void i_checkout_the_basket() throws Throwable {
 		amazonHomePage.checkOut();
-	    //sleep(5000);
 	}
 	
 	@Then("^I check sign in$")
 	public void i_check_sign_in() throws Throwable {
 	    String checked2 = amazonHomePage.signIn();
 	    System.out.println("Checked '" + checked2 + "'");
-	    //sleep(5000);
 	}
 
 }

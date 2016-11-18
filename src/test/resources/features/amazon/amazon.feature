@@ -11,10 +11,11 @@
     And   page has opened
 
   Scenario: Amazon search and checkout
-    When I search for "xbox one"
-    And  I sort by "Featured"
-    Then the first item is "xbox one s"
-    Then I select item "xbox one s"
-    Then I add "xbox one s" into basket
+    When I search for "echo"
+    And  I sort by "Relevance"
+    Then the first item is "echo"
+    Then I select item "echo"
+    Then I add "echo" into basket
+    Then I decline "add-on"
     Then I checkout the basket
     Then I check sign in

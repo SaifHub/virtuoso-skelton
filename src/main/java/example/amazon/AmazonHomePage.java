@@ -15,14 +15,14 @@ import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 public class AmazonHomePage extends BasePage{
 	
 //Attributes
-private static final String URL = "https://www.amazon.co.uk/"; 														 //SET URL
-private static final PageElement SEARCH = PageElement.byId("twotabsearchtextbox", "Amazon Home Page: Search Field"); //SET Search field via inspection
-private static final PageElement SORTBY = PageElement.byId("sort", "Amazon Home Page: Sort Drop Down");
-private static final PageElement CHECK = PageElement.byXpath("//*[@id='result_6']/div/div/div/div[2]/div[2]/a/h2", "Amazon Check Page: Check Featured");
-private static final PageElement TB = PageElement.byId("a-autoid-10-announce", "Amazon Select 1TB");
-private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "Amazon Basket Button");	
-private static final PageElement CHECKOUT = PageElement.byId("hlb-ptc-btn", "Amazon Checkout Button");
-private static final PageElement SIGNIN = PageElement.byId("signInSubmit", "Amazon Sign In");
+private static final String URL = "https://www.amazon.co.uk/"; 														 
+private static final PageElement SEARCH = PageElement.byId("twotabsearchtextbox", "Amazon Home Page: Search Field"); 
+private static final PageElement SORTBY = PageElement.byId("sort", "Amazon Home Page: Relevance");
+private static final PageElement CHOOSE = PageElement.byXpath("//*[@id='result_0']/div/div/div/div[2]/div[2]/a/h2", "Amazon Check Page: Check Relevance");
+private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "Add To Basket Button");
+private static final PageElement CONTINUE = PageElement.byId("intl_pop_continue", "Continue With No Add-On");
+private static final PageElement CHECKOUT = PageElement.byXpath("//*[@id='hlb-next-steps']/a", "Checkout Basket");
+private static final PageElement SIGNIN = PageElement.byId("signInSubmit", "Sign In Page: Select Button");
 
 public static AmazonHomePage launch()
 {
@@ -40,24 +40,24 @@ protected void sortBy(String sort)
 	pilot.selectValueFromField(SORTBY, sort);
 }
 
-protected String check()
+protected String choose()
 {
-	return pilot.getText(CHECK);
+	return pilot.getText(CHOOSE);
 }
 
 protected void select()
 {
-	pilot.click(CHECK);
-}
-
-protected void tb()
-{
-	pilot.click(TB);
+	pilot.click(CHOOSE);
 }
 
 protected void basket()
 {
 	pilot.click(BASKET);
+}
+
+protected void decline()
+{
+	pilot.click(CONTINUE);
 }
 
 protected void checkOut()
