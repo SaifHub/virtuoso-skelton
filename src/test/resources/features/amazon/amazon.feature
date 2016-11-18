@@ -8,7 +8,6 @@
 
   Background: Amazon Website
     Given I have visited Amazon website
-    And   page has opened
 
   Scenario: Amazon search and checkout
     When I search for "echo"
@@ -16,6 +15,5 @@
     Then the first item is "echo"
     Then I select item "echo"
     Then I add "echo" into basket
-    Then I decline "add-on"
     Then I checkout the basket
     Then I check sign in
