@@ -22,7 +22,7 @@ private static final PageElement CHOOSE = PageElement.byXpath("//*[@id='result_0
 private static final PageElement BASKET = PageElement.byId("add-to-cart-button", "Add To Basket Button");
 private static final PageElement DECLINEADDON = PageElement.byId("intl_pop_continue", "Continue With No Add-On");
 private static final PageElement CART = PageElement.byXpath("//*[@id='hlb-next-steps']/a", "Proceed to Cart");
-private static final PageElement CHECKOUT = PageElement.byXpath("//*[@id='sc-buy-box-ptc-button']/span/input", "Proceed to Cart");
+private static final PageElement CHECKOUT = PageElement.byXpath("//*[@id='sc-buy-box-ptc-button']/span/input", "Proceed to Checkout");
 private static final PageElement SIGNIN = PageElement.byId("signInSubmit", "Sign In Page: Select Button");
 
 public static AmazonHomePage launch()
