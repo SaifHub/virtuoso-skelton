@@ -17,5 +17,4 @@
     Then I select item "xbox one s"
     Then I add "xbox one s" into basket
     Then I checkout the basket
-    Then I decline breakdown cover
     Then I check sign in

@@ -57,12 +57,6 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	    //sleep(5000);
 	}
 	
-	@Then("^I decline breakdown cover$")
-	public void i_decline_breakdown() throws Throwable {
-		amazonHomePage.noThanks();
-	    //sleep(5000);
-	}
-	
 	@Then("^I check sign in$")
 	public void i_check_sign_in() throws Throwable {
 	    String checked2 = amazonHomePage.signIn();
