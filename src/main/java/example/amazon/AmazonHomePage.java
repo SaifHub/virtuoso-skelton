@@ -25,7 +25,7 @@ private static final PageElement CART = PageElement.byXpath("//*[@id='hlb-next-s
 private static final PageElement CHECKOUT = PageElement.byXpath("//*[@id='sc-buy-box-ptc-button']/span/input", "Proceed to Checkout");
 private static final PageElement SIGNIN = PageElement.byId("signInSubmit", "Sign In Page: Select Button");
 
-public static AmazonHomePage launch()
+protected static AmazonHomePage launch()
 {
 	ExecutionContext.getInstance().getPilot().navigateTo(UrlAdd);
 	return new AmazonHomePage();

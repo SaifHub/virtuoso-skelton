@@ -18,12 +18,12 @@ public class HomePage extends BasePage{
         return new HomePage();
     }
 
-    public void screenshot() {
+    protected void screenshot() {
         pilot.getScreenshot();
     }
 
 
-    public void printCapabilities() {
+    protected void printCapabilities() {
         Capabilities caps = ((RemoteWebDriver)pilot.getWebDriver()).getCapabilities();
 
         logger.log(Level.INFO,"Selenium WebDriver Info");
