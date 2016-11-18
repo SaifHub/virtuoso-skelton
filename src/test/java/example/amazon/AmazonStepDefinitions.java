@@ -37,23 +37,35 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	
 	@Then("^I select item \"([^\"]*)\"$")
 	public void i_select_item(String arg1) throws Throwable {
+	    String checked = amazonHomePage.choose();
 	    amazonHomePage.select();
+	    System.out.println("Selected '" + checked + "'");
 	}
 	
 	@Then("^I add \"([^\"]*)\" into basket$")
 	public void i_add_into_basket(String arg1) throws Throwable {
 		amazonHomePage.basket();
 	}
+
+	@Then("^I decline add-on$")
+	public void i_decline_add_on() throws Throwable {
+		amazonHomePage.declineAddOn();
+	}
 	
-	@Then("^I checkout the basket$")
-	public void i_checkout_the_basket() throws Throwable {
-		amazonHomePage.checkOut();
+	@Then("^I check the cart$")
+	public void i_check_the_cart() throws Throwable {
+		amazonHomePage.cart();
+	}
+	
+	@Then("^I proceed to checkout$")
+	public void i_proceed_to_checkout() throws Throwable {
+		amazonHomePage.checkout();
 	}
 	
 	@Then("^I check sign in$")
 	public void i_check_sign_in() throws Throwable {
 	    String checked2 = amazonHomePage.signIn();
-	    System.out.println("Checked '" + checked2 + "'");
+	    System.out.println("Checked '" + checked2 + " At Sign in Page'");
 	}
 
 }
