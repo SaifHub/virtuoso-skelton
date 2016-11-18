@@ -25,7 +25,7 @@ private static final PageElement CHECKOUT = PageElement.byId("hlb-ptc-btn", "Ama
 private static final PageElement NOTHANKS = PageElement.byId("siNoCoverage", "Amazon No Thanks Button");
 private static final PageElement SIGNIN = PageElement.byXpath("//*[@id='a-page']/div[1]/div[3]/div/div/form/div/div/div/h1", "Amazon No Thanks Button");
 
-protected static AmazonHomePage launch()
+public static AmazonHomePage launch()
 {
 	ExecutionContext.getInstance().getPilot().navigateTo(URL);
 	return new AmazonHomePage();
