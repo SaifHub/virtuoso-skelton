@@ -25,53 +25,53 @@ private static final PageElement CHECKOUT = PageElement.byId("hlb-ptc-btn", "Ama
 private static final PageElement NOTHANKS = PageElement.byId("siNoCoverage", "Amazon No Thanks Button");
 private static final PageElement SIGNIN = PageElement.byXpath("//*[@id='a-page']/div[1]/div[3]/div/div/form/div/div/div/h1", "Amazon No Thanks Button");
 
-public static AmazonHomePage launch()
+protected static AmazonHomePage launch()
 {
 	ExecutionContext.getInstance().getPilot().navigateTo(URL);
 	return new AmazonHomePage();
 }
 
-public void AmazonSearch(String search)
+protected void AmazonSearch(String search)
 {
 	pilot.sendKeys(SEARCH, search + Keys.RETURN);
 }
 
-public void SortBy(String sort)
+protected void SortBy(String sort)
 {
 	pilot.selectValueFromField(SORTBY, sort);
 }
 
-public String Check()
+protected String Check()
 {
 	return pilot.getText(CHECK);
 }
 
-public void Select()
+protected void Select()
 {
 	pilot.click(CHECK);
 }
 
-public void TB()
+protected void TB()
 {
 	pilot.click(TB);
 }
 
-public void Basket()
+protected void Basket()
 {
 	pilot.click(BASKET);
 }
 
-public void Checkout()
+protected void Checkout()
 {
 	pilot.click(CHECKOUT);
 }
 
-public void Nothanks()
+protected void Nothanks()
 {
 	pilot.click(NOTHANKS);
 }
 
-public String Signin()
+protected String Signin()
 {
 	return pilot.getText(SIGNIN);
 }
