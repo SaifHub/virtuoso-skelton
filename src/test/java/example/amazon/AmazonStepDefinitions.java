@@ -33,7 +33,6 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@Then("^the first item is \"([^\"]*)\"$")
 	public void the_first_item_is(String arg1) throws Throwable {
 	    String checked = amazonHomePage.check();
-	    //assertor.assertTrue("Check string " + checked + " contains " + arg1, checked.contains(arg1));
 	    System.out.println("Checked '" + checked + "'");
 	}
 	
@@ -41,12 +40,6 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	public void i_select_item(String arg1) throws Throwable {
 	    amazonHomePage.select();
 	}
-	
-	/*@Then("^I select \"([^\"]*)\"$")
-	public void i_select(String arg1) throws Throwable {
-	    amazonHomePage.TB();
-	    sleep(5000);
-	}*/
 	
 	@Then("^I add \"([^\"]*)\" into basket$")
 	public void i_add_into_basket(String arg1) throws Throwable {

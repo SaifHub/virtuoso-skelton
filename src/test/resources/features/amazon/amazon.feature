@@ -15,7 +15,6 @@
     And  I sort by "Featured"
     Then the first item is "xbox one s"
     Then I select item "xbox one s"
-    #Then I select "FIFA 1TB"
     Then I add "xbox one s" into basket
     Then I checkout the basket
     Then I decline breakdown cover
