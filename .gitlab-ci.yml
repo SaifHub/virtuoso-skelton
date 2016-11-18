@@ -16,34 +16,19 @@ version: '2'
 # Change volumes: /Users/XXXX/XXXX/XXXX:/var/jenkins_home
 # Where XXXX is insert your jenkins source folder.
 
+iimage: kaiwinter/docker-java8-maven
+
 stages:
-  - Saifhub
-  - chrome
-  - firefox
-  - jenkins
-  - sonarqube
-  - jira
-  - confluence
-  - docker
-  - maven
-  - java
-  - job1
-  - job2
+  - test
+  - coverage
 
-# image: kaiwinter/docker-java8-maven
+test:
+  stage: test
+  script: "mvn clean test"
 
-docker:
-  image: docker
-
-java:
-  image: java
-
-maven:
-  image: maven
-  job1:
-   script: mvn clean test
-  job2:
-    script: mvn jacoco:report
+coverage:
+  stage: coverage
+  script: "mvn jacoco:report"
 
   #Run Selenium Hub
   Saifhub:
@@ -52,56 +37,3 @@ maven:
     image: selenium/hub
     ports:
       - 4444:4444
-
-  #Run Google Chrome
-  chrome:
-    container_name: SaifChrome
-    image: selenium/node-chrome
-    environment:
-      - HUB_PORT_4444_TCP_ADDR=Saifhub
-      - HUB_PORT_4444_TCP_PORT=4444
-
-  #Run Mozilla Firefox
-  firefox:
-    container_name: SaifFirefox
-    image: selenium/node-firefox
-    environment:
-      - HUB_PORT_4444_TCP_ADDR=Saifhub
-      - HUB_PORT_4444_TCP_PORT=4444
-
-  #Run Jenkins
-  jenkins:
-    container_name: SaifJenkin
-    image: jenkins
-    ports:
-      - 8080:8080
-      - 50000:50000
-    volumes:
-      - /Users/SaifAbdulMacbook/documents/jenkins:/var/jenkins_home
-
-  #Run SonarQube
-  sonarqube:
-   hostname: sonarqube
-   container_name: SaifSonarqube
-   image: sonarqube
-   ports:
-     - 9000:9000
-     - 9092:9092
-   volumes:
-     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/logs
-     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/extensions
-     - /Users/SaifAbdulMacbook/desktop/home_office/sonarqube:/opt/sonarqube/data
-
-  #Run Jira
-  jira:
-    container_name: SaifJira
-    image: mhubig/atlassian-jira
-    volumes:
-      - /Users/SaifAbdulMacbook/desktop/home_office/jira:/opt/jira-home
-
-  #Run Confluence
-  confluence:
-    container_name: SaifConfluence
-    image: mhubig/atlassian-confluence
-    volumes:
-      - /Users/SaifAbdulMacbook/desktop/home_office/confluence:/opt/confluence-home
