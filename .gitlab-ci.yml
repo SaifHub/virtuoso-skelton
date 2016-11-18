@@ -1,4 +1,4 @@
-image: kaiwinter/docker-java8-maven, selenium/hub, selenium/node-chrome, selenium/node-firefox
+image: kaiwinter/docker-java8-maven
 
 stages:
   - test
