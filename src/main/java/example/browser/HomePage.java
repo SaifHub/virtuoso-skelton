@@ -1,6 +1,7 @@
 package example.browser;
 
 import java.util.logging.Logger;
+import java.util.logging.Level;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -12,7 +13,7 @@ public class HomePage extends BasePage{
 
 	Logger logger = Logger.getLogger(HomePage.class.getName());
 	
-    public static HomePage launch(String URL) {
+    protected static HomePage launch(String URL) {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new HomePage();
     }
@@ -25,17 +26,16 @@ public class HomePage extends BasePage{
     public void printCapabilities() {
         Capabilities caps = ((RemoteWebDriver)pilot.getWebDriver()).getCapabilities();
 
-        System.out.println("Selenium WebDriver Info");
-        System.out.println("Browser Name: " + caps.getBrowserName());
-        System.out.println("Browser Version: " + caps.getVersion());
-        System.out.println("Browser Platform: " + caps.getPlatform());
-        System.out.println("Browser Screen size: " +
+        logger.log(Level.INFO,"Selenium WebDriver Info");
+        logger.log(Level.INFO,"Browser Name: " + caps.getBrowserName());
+        logger.log(Level.INFO,"Browser Version: " + caps.getVersion());
+        logger.log(Level.INFO,"Browser Platform: " + caps.getPlatform());
+        logger.log(Level.INFO,"Browser Screen size: " +
                 ExecutionContext.getInstance().getPilot().getWebDriver().manage().window().getSize());
 
         JavascriptExecutor js = (JavascriptExecutor)pilot.getWebDriver();
         String useragent = (String)js.executeScript("return navigator.userAgent;");
-        System.out.println("User Agent is "+useragent);
-
-
+        logger.log(Level.INFO,"User Agent is "+useragent);
     }
+    
 }
