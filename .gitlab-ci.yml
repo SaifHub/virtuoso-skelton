@@ -1,4 +1,4 @@
-image: kaiwinter/docker-java8-maven, selenium/hub
+image: kaiwinter/docker-java8-maven
 stages:
   - test
   - coverage
@@ -6,3 +6,5 @@ test:
  script: "mvn clean test"
 coverage:
  script: "mvn jacoco:report"
+ 
+image:  selenium/hub
