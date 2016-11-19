@@ -1,4 +1,4 @@
-image: kaiwinter/docker-java8-maven
+image: kaiwinter/docker-java8-maven, selenium/hub
 stages:
   - test
   - coverage
