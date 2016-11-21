@@ -1,5 +1,22 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay
+
+services:
+ - docker:dind
+
+before_script:
+ - docker info
+
+build:
+  stage: build
+  script:
+  - docker build -t my-docker-image
+  - docker run my-docker-imasge script/to/run/tests
+
+
 image: kaiwinter/docker-java8-maven
-image: docker/selenium
 
 stages:
   - test
