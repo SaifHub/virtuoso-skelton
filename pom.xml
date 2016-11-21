@@ -25,6 +25,11 @@
             <artifactId>virtuoso</artifactId>
             <version>${virtuoso.version}</version>
         </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>core</artifactId>
+            <version>${serenity.version}</version>
+        </dependency>
     </dependencies>
 
     <repositories>
