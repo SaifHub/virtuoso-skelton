@@ -6,7 +6,7 @@
 
     <groupId>virtuoso-skeleton</groupId>
     <artifactId>uk.gov.skeleton</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>  
 
     <properties>
     	<jacoco-maven-plugin.version>0.7.7.201606060606</jacoco-maven-plugin.version>
@@ -15,6 +15,8 @@
         <java-source.version>1.8</java-source.version>
         <java-target.version>1.8</java-target.version>
         <virtuoso.version>1.10.2</virtuoso.version>
+        <serenity.version>1.0.47</serenity.version>
+        <serenity.maven.version>1.0.47</serenity.maven.version>
     </properties>
 
     <dependencies>
@@ -34,6 +36,27 @@
 
     <build>
         <plugins>
+        <plugin>
+                <groupId>net.serenity-bdd.maven.plugins</groupId>       
+                <artifactId>serenity-maven-plugin</artifactId>
+                <version>${serenity.maven.version}</version>
+                <dependencies>
+                     <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>core</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>serenity-reports</id>
+                        <phase>post-integration-test</phase>             
+                        <goals>
+                            <goal>aggregate</goal>                       
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         	<plugin>
   				<groupId>org.jacoco</groupId>
   				<artifactId>jacoco-maven-plugin</artifactId>
