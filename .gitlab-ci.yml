@@ -12,9 +12,7 @@ before_script:
 build:
   stage: build
   script:
-  - docker-compose up -d
+  - "docker-compose up -d"
 
-  
  after_script:
   - docker info
-
