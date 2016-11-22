@@ -1,8 +1,13 @@
-image: kaiwinter/docker-java8-maven
-stages:
-  - test
-  - coverage
-test:
- script: "mvn clean test"
-coverage:
- script: "mvn jacoco:report"
+before_script:
+  - docker info
+
+build_image:
+  script:
+    - docker build -t automation-test docker/
+    - docker run --privileged automation-test
+
+#image: kaiwinter/docker-java8-maven
+#stages:
+#  - test
+#test:
+# script: "mvn clean test"
