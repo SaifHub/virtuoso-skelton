@@ -9,10 +9,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.version>3.1</maven.compiler.version>
         <maven-assembly-plugin.version>2.5.3</maven-assembly-plugin.version>
         <java-source.version>1.8</java-source.version>
         <java-target.version>1.8</java-target.version>
+        <jacoco-maven-plugin.version>0.7.7.201606060606</jacoco-maven-plugin.version>
         <virtuoso.version>1.10.2</virtuoso.version>
     </properties>
 
@@ -62,22 +64,26 @@
 			<plugin>
 				 <groupId>org.jacoco</groupId>
 				 <artifactId>jacoco-maven-plugin</artifactId>
-				 <version>0.7.5.201505241946</version>
-				 <executions>
-					<execution>
-					   <id>pre-unit-test</id>
-					   <goals>
-						  <goal>prepare-agent</goal>
-					   </goals>
-					</execution>
-					<execution>
-					   <id>post-unit-test</id>
-					   <phase>test</phase>
-					   <goals>
-						  <goal>report</goal>
-					   </goals>
-					</execution>
-				 </executions>
+				 <version>${jacoco-maven-plugin.version}</version>
+                <configuration>
+                    <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+                    <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>pre-unit-test</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
 			</plugin>
         </plugins>
     </build>
