@@ -5,7 +5,6 @@ variables:
 
 services:
 - docker:dind
-- maven
 
 before_script:
 - docker info
