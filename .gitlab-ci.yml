@@ -5,6 +5,7 @@ variables:
 
 services:
 - docker:dind
+- kaiwinter/docker-java8-maven
 
 before_script:
 - docker info
@@ -18,7 +19,7 @@ build:
 test:
  stage: test
  script: 
- - docker run kaiwinter/docker-java8-maven "mvn clean test"
+ - "mvn clean test"
 
 after_script:
  - docker info
