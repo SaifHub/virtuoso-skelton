@@ -27,4 +27,4 @@ ADD xvfb /etc/init.d
 RUN chmod +x /etc/init.d/xvfb
 RUN update-rc.d xvfb defaults
 
-CMD (service xvfb start;  mvn clean test);
+CMD (service xvfb start; cd /builds/adrianhkchan/virtuoso-skeleton; mvn clean test);
