@@ -12,9 +12,3 @@ Feature: Belly
     When I wait 1 hour
     Then my belly should silent
 
-  @silent
-  Scenario: zero hours
-    Given I have 50 cukes in my belly
-    When I wait 0 hour
-    Then my belly should silent
-

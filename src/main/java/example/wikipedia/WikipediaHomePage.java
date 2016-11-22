@@ -15,27 +15,15 @@ public class WikipediaHomePage extends BasePage {
     private static final PageElement SEARCH_INPUT_TEXT = new PageElement(PageElement.Type.ID,
         "searchInput", "Wikipedia Home Page: Search Input Text");
 
-    /**
-     * Enters a search term into the search field
-     * @param value search term
-     */
     public void setSearchInputText(String value) {
         pilot.sendKeys(SEARCH_INPUT_TEXT, value);
     }
 
-    /**
-     * Click the 'Go' Button
-     * @return WikipediaComputingPage
-     */
     public WikipediaComputingPage clickGoButton() {
         pilot.click(GO_BUTTON);
         return new WikipediaComputingPage();
     }
 
-    /**
-     * Navigates to the URL
-     * @return WikipeidaHomePage
-     */
     public static WikipediaHomePage launch() {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new WikipediaHomePage();
