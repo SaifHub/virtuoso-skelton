@@ -6,7 +6,7 @@ variables:
 services:
 - docker:dind
 - maven
-- node-firefox
+- vxfb
 
 before_script:
 - docker info
