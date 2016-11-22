@@ -6,7 +6,7 @@ variables:
 services:
 - docker:dind
 - maven
-- java8
+- java
 
 before_script:
 - docker info
