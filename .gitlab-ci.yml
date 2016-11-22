@@ -5,7 +5,8 @@ variables:
 
 services:
 - docker:dind
-- kaiwinter/docker-java8-maven
+- maven
+- node-firefox
 
 before_script:
 - docker info
