@@ -7,7 +7,6 @@ services:
 - docker:dind
 - maven
 - vxfb
-- java
 
 before_script:
 - docker info
