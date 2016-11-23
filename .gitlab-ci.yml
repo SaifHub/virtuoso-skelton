@@ -25,7 +25,7 @@
 #test:
 # script: "mvn clean test"
 
-image: adrianchan/fred
+image: adrianchan/maven-xvfb
 
 before_script:
   - service xvfb start
