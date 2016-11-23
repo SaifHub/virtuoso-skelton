@@ -1,4 +1,6 @@
-image: kaiwinter/docker-java8-maven
+image: amichael/tests
+before_script: 
+  - ./xvfb.sh
 stages:
   - test
   - coverage
