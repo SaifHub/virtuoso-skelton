@@ -1,6 +1,6 @@
 image: amichael/tests
 before_script: 
-  - ./xvfb.sh
+  - . /xvfb.sh
 stages:
   - test
   - coverage
