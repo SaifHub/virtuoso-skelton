@@ -10,31 +10,4 @@ stages:
 test:
   script: "mvn clean test"
 coverage:
-  script: "mvn jacoco:report"  
-#variables:
-# DOCKER_DRIVER: overlay
-
-#services:
-#- docker:dind
-
-#before_script:
-#- docker info
-#- Xvfb :99 -screen 5 1024x768x8 &
-#- apk add --no-cache py-pip
-#- pip install docker-compose
-
-#build:
-# stage: build
-# script:
-#  - docker build -t fred .
-# - docker-compose up -d
-# - docker build -t automation-test docker/
-# - docker run --privileged automation-test
-
-#test:
-# stage: test
-# script: 
-# - "mvn clean test"
-
-#after_script:
-# - docker info
+  script: "mvn jacoco:report"
