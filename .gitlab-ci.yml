@@ -34,4 +34,4 @@ stages:
   - test
 
 test:
-  script: "mvn clean test -Dtest=RunBelly"
+  script: "mvn clean test"
