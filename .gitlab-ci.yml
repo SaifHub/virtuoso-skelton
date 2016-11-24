@@ -1,14 +1,6 @@
 # @author: ABDUL SAIF
 # @date  : 14/11/2016-15/11/2016
 
-# This YAML file Executes Docker and boots up the following:
-# Docker, Java, Maven and Selenium Hub.
-
-# Show hidden files: defaults write com.apple.finder AppleShowAllFiles YES,
-# Refresh Finder: killall finder
-
-# ted and saifabs can be changed
-
 image: lmear/fred:v2
 
 before_script:
