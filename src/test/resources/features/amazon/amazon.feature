@@ -4,7 +4,7 @@
 
 
 	Feature: Amazon search
-  				 As a customer I want to use Amazon, so that I can search for a product
+      As a customer I want to use Amazon, so that I can search for a product
 
   Background: Amazon Website
     Given I have visited Amazon website
