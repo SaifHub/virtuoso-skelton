@@ -57,10 +57,10 @@ public class AmazonStepDefinitions extends SeleniumTest{
 		amazonHomePage.cart();
 	}
 
-	@Then("^I proceed to checkout$")
-	public void i_proceed_to_checkout() throws Throwable {
-		amazonHomePage.checkout();
-	}
+//	@Then("^I proceed to checkout$")
+//	public void i_proceed_to_checkout() throws Throwable {
+//		amazonHomePage.checkout();
+//	}
 	
 	@Then("^I check sign in$")
 	public void i_check_sign_in() throws Throwable {
