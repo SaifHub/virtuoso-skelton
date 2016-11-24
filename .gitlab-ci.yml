@@ -5,35 +5,23 @@ version: '2'
 # @date  : 14/11/2016-15/11/2016
 
 # This YAML file Executes Docker and boots up the following:
-# Sonarqube, Jenkins, Selenium Hub, Jira, Confluence, Firefox and Chrome.
+# Docker, Java, Maven and Selenium Hub.
 
-# Use run command in terminal: docker-compose up -d
-# Check hosts: sudo nano /etc/hosts
 # Show hidden files: defaults write com.apple.finder AppleShowAllFiles YES,
 # Refresh Finder: killall finder
 
-#                        Local Disk    :   Virtual Disk
-# Change volumes: /Users/XXXX/XXXX/XXXX:/var/jenkins_home
-# Where XXXX is insert your jenkins source folder.
+# ted and saifabs can be changed
 
-iimage: kaiwinter/docker-java8-maven
+image: saifabs/ted
+
+before_script:
+  - . /xvfb.sh
 
 stages:
   - test
   - coverage
 
 test:
-  stage: test
   script: "mvn clean test"
-
 coverage:
-  stage: coverage
   script: "mvn jacoco:report"
-
-  #Run Selenium Hub
-  Saifhub:
-    hostname: selenium_hub
-    container_name: SaifHub
-    image: selenium/hub
-    ports:
-      - 4444:4444
