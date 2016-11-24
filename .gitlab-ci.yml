@@ -1,4 +1,4 @@
-image: lmear/fred:v2
+image: elgalu/docker-selenium
 
 before_script:
   - . /xvfb.sh
