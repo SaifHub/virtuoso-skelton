@@ -12,7 +12,7 @@ version: '2'
 
 # ted and saifabs can be changed
 
-image: saifabs/ted
+image: lmear/fred:v2
 
 before_script:
   - . /xvfb.sh
