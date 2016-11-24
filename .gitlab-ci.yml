@@ -36,8 +36,8 @@ stages:
 test:
   script:
     - mvn clean test
-  artifacts:always
+  artifacts:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
     paths:
-      - virtuoso-test-results/*.json
+    - virtuoso-test-results/*.json
     expire_in: 1 week
