@@ -1,4 +1,4 @@
-image: amichael/tests
+image: amichael/yolo
 before_script: 
   - . /xvfb.sh
 stages:
