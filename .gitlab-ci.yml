@@ -1,4 +1,4 @@
-image: lmear/fred
+image: lmear/fred:v2
 
 before_script:
   - . /xvfb.sh
