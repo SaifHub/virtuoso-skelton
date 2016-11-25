@@ -4,7 +4,7 @@
 #
   @virtuoso
   Feature: Amazon search, inluding serenity
-         As a customer I want to use Amazon, so that I can search for a product
+         As a customer I want to use Amazon, so that I can search for a product - serenity
 
   Scenario: Amazon search and checkout serenity
     Given I open Amazon

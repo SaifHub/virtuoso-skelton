@@ -92,7 +92,7 @@
     </repositories>
     <!--END of REPOSITORIES-->
 
-
+    <!--BUILD-->
     <build>
         <!--PLUGINS-->
         <plugins>
@@ -188,4 +188,5 @@
         </plugins>
         <!--END of PLUGINS-->
     </build>
+    <!--END of BUILD-->
 </project>
