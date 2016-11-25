@@ -2,8 +2,6 @@ image: lmear/fred:v2
 
 before_script:
   - . /xvfb.sh
-  - selenium-hub
-  - node-chrome
   
 stages:
   - test
