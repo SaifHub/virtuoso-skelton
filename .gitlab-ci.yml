@@ -1,5 +1,9 @@
 image: lmear/fred:v2
 
+services:
+  - selenium-hub
+  - node-chrome
+
 before_script:
   - . /xvfb.sh
   
