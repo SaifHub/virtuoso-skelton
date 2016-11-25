@@ -2,7 +2,6 @@ image: lmear/fred:v2
 
 before_script:
   - . /xvfb.sh
-  - . /selenium.sh
   
 stages:
   - test
@@ -10,20 +9,11 @@ stages:
   
 test:
   script: "mvn clean test"
+  artifacts:
+    name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
+    paths:
+    - virtuoso-test-results/*.json
+    expire_in: 1 week
+    
 coverage:
   script: "mvn jacoco:report"
-
-test:
-  
-  script:
-    
-  - mvn clean test
-  artifacts:
-
-  name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
-    
-  paths:
-    
-  - virtuoso-test-results/*.json
-    
-  expire_in: 1 week
