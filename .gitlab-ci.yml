@@ -1,7 +1,7 @@
 image: lmear/fred:v2
 
 services:
-  - hub
+  - selenium/hub
   - node-chrome
 
 before_script:
