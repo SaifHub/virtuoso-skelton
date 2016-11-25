@@ -6,7 +6,7 @@ stages:
   - coverage
 test:
  script: "mvn clean test"
- artefacts:
+ artifacts:
      name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
      paths:
      - virtuoso-test-results/*.json
