@@ -13,7 +13,9 @@ import org.junit.runner.RunWith;
 
 //RUNNER file
 @CucumberOptions(
-        features = "src/test/resources/features/serenity/amazonS.feature"
+        features = {
+                "src/test/resources/features/serenity/amazonS.feature",
+                "src/test/resources/features/belly/belly.feature"}
 )
 
 public class RunAmazonS {
