@@ -8,54 +8,64 @@
     <artifactId>uk.gov.skeleton</artifactId>
     <version>1.0-SNAPSHOT</version>  
 
+    <!--PROPERTIES-->
     <properties>
+        <!--A-->
+        <assertj.version>3.5.1</assertj.version>
+        <!--F-->
+        <failsafe.version>2.19.1</failsafe.version>
+        <!--J-->
     	<jacoco-maven-plugin.version>0.7.7.201606060606</jacoco-maven-plugin.version>
-        <maven.compiler.version>3.1</maven.compiler.version>
-        <maven-assembly-plugin.version>2.5.3</maven-assembly-plugin.version>
         <java-source.version>1.8</java-source.version>
         <java-target.version>1.8</java-target.version>
-        <virtuoso.version>1.10.2</virtuoso.version>
         <junit.version>4.12</junit.version>
-        <surefire.version>2.19.1</surefire.version>
-        <failsafe.version>2.19.1</failsafe.version>
-        <assertj.version>3.5.1</assertj.version>
-        <slf4j.version>1.7.5</slf4j.version>
-        <serenity.version>1.1.36</serenity.version>
-        <serenity.maven.version>1.1.36</serenity.maven.version>
+        <!--M-->
+        <maven-assembly-plugin.version>2.5.3</maven-assembly-plugin.version>
+        <maven.compiler.version>3.1</maven.compiler.version>
+        <!--S-->
         <serenity.cucumber.version>1.1.8</serenity.cucumber.version>
+        <serenity.maven.version>1.1.36</serenity.maven.version>
+        <serenity.version>1.1.36</serenity.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <surefire.version>2.19.1</surefire.version>
+        <!--V-->
+        <virtuoso.version>1.10.2</virtuoso.version>
     </properties>
+    <!--END of PROPERTIES-->
 
+    <!--DEPENDENCIES-->
     <dependencies>
-        <dependency>
-            <groupId>uk.gov.homeoffice</groupId>
-            <artifactId>virtuoso</artifactId>
-            <version>${virtuoso.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-
+        <!--A-->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <!--H-->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
+            <groupId>uk.gov.homeoffice</groupId>
+            <artifactId>virtuoso</artifactId>
+            <version>${virtuoso.version}</version>
         </dependency>
-
+        <!--J-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--S-->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
             <version>${serenity.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber</artifactId>
+            <version>${serenity.cucumber.version}</version>
         </dependency>
 
         <dependency>
@@ -65,35 +75,54 @@
         </dependency>
 
         <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-cucumber</artifactId>
-            <version>${serenity.cucumber.version}</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
+    <!--END of DEPENDENCIES-->
 
+
+    <!--REPOSITORIES-->
     <repositories>
         <repository>
             <id>tdcs_framework-repository</id>
             <url>https://gitlab.com/tdcs_framework/maven/raw/master/repository/</url>
         </repository>
     </repositories>
+    <!--END of REPOSITORIES-->
 
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<id>serenity</id>-->
-            <!--<name>bintray-plugins</name>-->
-            <!--<url>http://dl.bintray.com/serenity/maven</url>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
 
     <build>
+        <!--PLUGINS-->
         <plugins>
-
-        	<plugin>
-  				<groupId>org.jacoco</groupId>
-  				<artifactId>jacoco-maven-plugin</artifactId>
- 				 <version>${jacoco-maven-plugin.version}</version>
- 				                 <configuration>
+            <!--C-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java-source.version}</source>
+                    <target>${java-target.version}</target>
+                </configuration>
+            </plugin>
+            <!--F-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${failsafe.version}</version>
+                <configuration>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <!--J-->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin.version}</version>
+                <configuration>
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
                 </configuration>
@@ -112,37 +141,17 @@
                         </goals>
                     </execution>
                 </executions>
-			</plugin>
-
+            </plugin>
+            <!--S-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>${failsafe.version}</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
                 <configuration>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
+                    <skipTests>false</skipTests>
                 </configuration>
             </plugin>
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--<goal>integration-test</goal>-->
-                            <!--<goal>verify</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.version}</version>
-                <configuration>
-                    <source>${java-source.version}</source>
-                    <target>${java-target.version}</target>
-                </configuration>
-            </plugin>
 
             <!--<plugin>-->
                 <!--<groupId>net.serenity-bdd.maven.plugins</groupId>-->
@@ -182,15 +191,6 @@
                     <!--</execution>-->
                 <!--</executions>-->
             <!--</plugin>-->
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire.version}</version>
-                <configuration>
-                    <skipTests>false</skipTests>
-                </configuration>
-            </plugin>
 
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
