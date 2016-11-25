@@ -1,12 +1,15 @@
 package example.wikipedia;
 
+/**
+ * @author : ABDUL SAIF
+ * @date   : 10/11/2016
+ *
+ */
+
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.element.PageElement;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 
-/**
- * Demo class.
- */
 public class WikipediaHomePage extends BasePage {
 
     private static final String URL = "http://www.wikipedia.org/";

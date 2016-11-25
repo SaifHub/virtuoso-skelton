@@ -1,3 +1,4 @@
+@virtuoso
 Feature: Wikipedia searching
   As a user
   I want to use Wikipedia
@@ -14,6 +15,6 @@ Feature: Wikipedia searching
       | Term      	   |
       | Computing 	   |
       | United Kingdom |
-      | Apple				 	 |
+      | Apple          |
       
 

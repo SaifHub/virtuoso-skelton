@@ -1,9 +1,10 @@
 package example.serenity;
 
-/*
-* @name: ABDUL SAIF
-* @date: 24/11/2016
-*/
+/**
+ * @author : ABDUL SAIF
+ * @date   : 24/11/2016
+ *
+ */
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;

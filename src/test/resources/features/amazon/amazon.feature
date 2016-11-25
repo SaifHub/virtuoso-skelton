@@ -2,6 +2,7 @@
 # @author ABDUL SAIF
 # @date	  10/11/2016
 
+  @virtuoso
   Feature: Amazon search
           As a customer I want to use Amazon, so that I can search for a product
 

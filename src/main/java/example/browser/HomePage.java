@@ -1,5 +1,11 @@
 package example.browser;
 
+/**
+ * @author : ABDUL SAIF
+ * @date   : 10/11/2016
+ *
+ */
+
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import org.openqa.selenium.Capabilities;
@@ -7,7 +13,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
-
 
 public class HomePage extends BasePage{
 

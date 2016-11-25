@@ -6,11 +6,10 @@ import uk.gov.homeoffice.virtuoso.framework.element.PageElement;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
 
 /**
- * @author ABDUL SAIF
- * Created - 10/11/2016
+ * @author : ABDUL SAIF
+ * @date   : 10/11/2016
  *
  */
-
 
 public class AmazonHomePage extends BasePage{
 	
