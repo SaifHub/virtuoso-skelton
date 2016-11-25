@@ -2,6 +2,7 @@ image: lmear/fred:v2
 
 before_script:
   - . /xvfb.sh
+  - . /selenium.sh
   
 stages:
   - test
