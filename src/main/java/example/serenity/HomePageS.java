@@ -1,5 +1,10 @@
-//package example.serenity;
-//
+package example.serenity;
+
+/*
+* @name: ABDUL SAIF
+* @date: 24/11/2016
+*/
+
 //import net.serenitybdd.core.annotations.findby.FindBy;
 //import net.serenitybdd.core.pages.PageObject;
 //import net.serenitybdd.core.pages.WebElementFacade;
@@ -11,7 +16,7 @@
 //
 //@DefaultUrl("http://amazon.co.uk")
 //
-//public class HomePageS extends PageObject {
+//public class AmazonHomePage extends PageObject {
 //
 //    //ATTRIBUTES
 //    @FindBy(xpath="//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/a/h2")
