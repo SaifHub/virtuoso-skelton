@@ -12,12 +12,6 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 
 //RUNNER file
-@CucumberOptions(
-        features = {
-                "src/test/resources/features/serenity/amazonS.feature",
-                "src/test/resources/features/belly/belly.feature"}
-)
+@CucumberOptions(features = {"src/test/resources/features/serenity/amazonS.feature"})
 
-public class RunAmazonS {
-    // Empty Constructor
-}
+public class RunAmazonS {}
