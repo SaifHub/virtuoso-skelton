@@ -10,6 +10,7 @@ import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
     @CucumberOptions(
         features = "src/test/resources/features/wikipedia/wikipedia.feature",
         format = {"pretty", "html:virtuoso-test-results/wikipedia", "json:virtuoso-test-results/wikipedia.json"}
+        , monochrome = true
     )
 
     public class RunWikipedia {

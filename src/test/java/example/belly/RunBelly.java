@@ -10,6 +10,7 @@ import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
         features = "src/test/resources/features/belly/belly.feature",
         format = {"pretty", "html:virtuoso-test-results/belly", "json:virtuoso-test-results/belly.json"}
         , tags = {"@growl, @slient"}
+        , monochrome = true
     )
 
     public class RunBelly {
