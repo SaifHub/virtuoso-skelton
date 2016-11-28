@@ -1,4 +1,4 @@
-image: lmear/mvntestframe:v2
+image: lmear/fred:v2
 
 services:
   - selenium/hub
