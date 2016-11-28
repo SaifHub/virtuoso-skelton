@@ -3,12 +3,6 @@ image: lmear/fred:v2
 services:
   - selenium/hub
   
-services:
-  - selenium/node-chrome
-
-variables:
-  links:
-    - selenium/hub
 
 before_script:
   - . /xvfb.sh
