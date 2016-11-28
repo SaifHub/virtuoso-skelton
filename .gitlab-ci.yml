@@ -8,9 +8,9 @@ before_script:
   - . /xvfb.sh
   
 stages:
-  - test&coverage
+  - test
     
-test&coverage:
+test:
   script: "mvn clean test jacoco:report"
   artifacts:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
