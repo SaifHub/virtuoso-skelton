@@ -43,11 +43,6 @@ public class HomePageS extends PageObject {
         $("#twotabsearchtextbox").type(actionName).then().sendKeys(Keys.ENTER);
     }
 
-    //public void sort(String actionName)
-    //{
-    //  $("#sort").type(actionName).then().sendKeys(Keys.ENTER);
-    //}
-
     //SELECT and ENTER first item on page
     public void selectItem()
     {

@@ -9,7 +9,6 @@
   Scenario: Amazon search and checkout serenity
     Given I open Amazon
     When I search for 'echo'
-    #Then  I sort by 'Relevance'
     When I select item 'echo'
     When I add 'echo' into basket
     When I decline add-on

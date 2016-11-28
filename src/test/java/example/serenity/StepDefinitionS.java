@@ -27,11 +27,6 @@ public class StepDefinitionS {
         homePageS.search(actionName);
     }
 
-    //@Then("^I sort by '(.*)'$")
-    //public void iSortBy(String actionName) {
-    //    homePageS.sort(actionName);
-    //}
-
     @When("^I select item '(.*)'$")
     public void iSelectItem(String actionName) {
         homePageS.selectItem();
