@@ -1,27 +1,25 @@
 package example.serenity;
 
 /*
-* @name: ABDUL SAIF
-* @date: 24/11/2016
+* @name : ABDUL SAIF
+* @date : 24/11/2016
 */
 
-import static org.assertj.core.api.Assertions.assertThat;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
-import net.thucydides.core.annotations.Steps;
 
 public class StepDefinitionS {
 
     private HomePageS homePageS;
 
-    //METHODS below are glued to FEATURES available within amazon.feature
+    //ALL METHODS below are glued to FEATURES available within amazon.feature
     @Given("^I open Amazon$")
     public void iOpenAmazon()  {
         homePageS.open();
     }
 
+    //DEFINITONS below have METHODS available within HomePageS.java
     @When("^I search for '(.*)'$")
     public void iSearchFor(String actionName) {
         homePageS.search(actionName);
@@ -52,9 +50,9 @@ public class StepDefinitionS {
         homePageS.checkout();
     }
 
-    @Then("^I check sign in$")
+    @Then("^I check sign-in$")
     public void iCheckSignIn() {
         homePageS.signIn();
     }
 
-} // END of AmazonStepDefinition class
+} // END of StepDefinitionS class

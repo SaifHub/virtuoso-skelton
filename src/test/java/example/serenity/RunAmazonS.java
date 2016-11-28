@@ -1,8 +1,8 @@
 package example.serenity;
 
 /*
-* @name: ABDUL SAIF
-* @date: 24/11/2016
+* @name : ABDUL SAIF
+* @date : 24/11/2016
 */
 
 import cucumber.api.CucumberOptions;
@@ -14,4 +14,4 @@ import org.junit.runner.RunWith;
 //RUNNER file
 @CucumberOptions(features = {"src/test/resources/features/serenity/amazonS.feature"})
 
-public class RunAmazonS {}
+public class RunAmazonS {} // END of RunAmazonS
