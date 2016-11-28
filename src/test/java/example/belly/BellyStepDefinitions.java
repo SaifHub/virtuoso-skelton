@@ -13,6 +13,7 @@ public class BellyStepDefinitions extends BaseTest {
     private Belly belly;
     private int waitingTime;
 
+    //ALL METHODS below are glued to FEATURES available within belly.feature
     @Given("^I have (\\d+) cukes in my belly$")
     public void i_have_cukes_in_my_belly(int cukes) throws Throwable {
         belly = new Belly();

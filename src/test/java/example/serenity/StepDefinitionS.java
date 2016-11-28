@@ -13,7 +13,7 @@ public class StepDefinitionS {
 
     private HomePageS homePageS;
 
-    //ALL METHODS below are glued to FEATURES available within amazon.feature
+    //ALL METHODS below are glued to FEATURES available within amazonS.feature
     @Given("^I open Amazon$")
     public void iOpenAmazon()  {
         homePageS.open();

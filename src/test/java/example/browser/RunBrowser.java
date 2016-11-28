@@ -1,12 +1,13 @@
 package example.browser;
 
+/*
+* @name : ABDUL SAIF
+* @date : 24/11/2016
+*/
+
 import org.junit.Test;
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
-/**
- * Created by adrian on 03/06/2016.
- */
-
 
 public class RunBrowser extends SeleniumTest {
 

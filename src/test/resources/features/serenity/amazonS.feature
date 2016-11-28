@@ -1,8 +1,6 @@
 
-#
-#  # @name : ABDUL SAIF
-#  # @date : 24/11/2016
-#
+# @author ABDUL SAIF
+# @date	  24/11/2016
 
   @virtuoso
   Feature: Amazon search, inluding serenity

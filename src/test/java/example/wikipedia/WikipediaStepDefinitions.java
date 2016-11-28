@@ -22,6 +22,7 @@ public class WikipediaStepDefinitions extends SeleniumTest {
     WikipediaHomePage wikipediaHomePage;
     WikipediaComputingPage wikipediaComputingPage;
 
+    //ALL METHODS below are glued to FEATURES available within wikipedia.feature
     @Given("^the Wikipedia site is accessed$")
     public void the_Wikipedia_site_is_accessed() throws Throwable {
         wikipediaHomePage = WikipediaHomePage.launch();

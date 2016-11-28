@@ -17,5 +17,4 @@
     Then I add "echo" into basket
     Then I decline add-on
     Then I check the cart
-#    Then I proceed to checkout
     Then I check sign in
