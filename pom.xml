@@ -61,10 +61,10 @@
                 </executions>
             </plugin>
             <plugin>
-               <groupId>org.jacoco</groupId>
-               <artifactId>jacoco-maven-plugin</artifactId>
-               <version>${jacoco-maven-plugin.version}</version>
-               <configuration>
+                 <groupId>org.jacoco</groupId>
+                 <artifactId>jacoco-maven-plugin</artifactId>
+                 <version>${jacoco-maven-plugin.version}</version>
+                <configuration>
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
                 </configuration>
@@ -86,6 +86,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
