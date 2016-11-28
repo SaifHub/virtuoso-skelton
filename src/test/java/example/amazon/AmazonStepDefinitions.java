@@ -57,7 +57,7 @@ public class AmazonStepDefinitions extends SeleniumTest{
 		amazonHomePage.cart();
 	}
 	
-	@Then("^I check sign in$")
+	@Then("^I check sign-in$")
 	public void i_check_sign_in() throws Throwable {
 	    String checked2 = amazonHomePage.signIn();
 	    System.out.println("Checked '" + checked2 + " At Sign in Page'");
