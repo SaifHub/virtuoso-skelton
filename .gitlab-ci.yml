@@ -10,7 +10,5 @@ test:
  artifacts:
      name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
      paths:
-     - virtuoso-test-results/*.json
+     - target/site/jacoco/*.html
      expire_in: 1 week
-coverage:
- script: "mvn jacoco:report"
