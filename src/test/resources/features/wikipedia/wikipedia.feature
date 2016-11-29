@@ -14,4 +14,3 @@ Feature: Wikipedia searching
       | Term        |
       | Computing   |
       | Japan       |
-      | Birmingham  |
