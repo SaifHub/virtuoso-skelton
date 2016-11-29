@@ -9,5 +9,5 @@ before_script:
  artifacts:
      name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
      paths:
-     -target/site/jacoco/*.html
+      - target/site/jacoco/*.html
      expire_in: 1 week
