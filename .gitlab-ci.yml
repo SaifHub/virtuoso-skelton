@@ -1,8 +1,12 @@
-image: kaiwinter/docker-java8-maven
+image: pworrall/milkchocolate
+before_script: 
+  - . /xvfb.sh
 stages:
   - test
-  - coverage
-test:
+  test:
  script: "mvn clean test"
-coverage:
- script: "mvn jacoco:report"
+artifacts:
+     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
+     paths:
+     - target/site/jacoco/*.html
+     expire_in: 1 week
