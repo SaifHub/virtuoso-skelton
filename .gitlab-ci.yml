@@ -1,8 +1,37 @@
-image: kaiwinter/docker-java8-maven
-stages:
-  - test
-  - coverage
-test:
- script: "mvn clean test"
-coverage:
- script: "mvn jacoco:report"
+FROM maven:3.3.9-jdk-8
+
+MAINTAINER Abraham Michael <Abraham.Michael@qa.com>
+
+RUN apt-get update && apt-get install -y -q unzip xvfb
+#Updates ubunutu packages, installs unzip and xvfb
+
+RUN wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux64.zip \
+    && unzip chromedriver_linux64.zip -d /usr/local/bin && rm chromedriver_linux64.zip \
+    && chmod +x /usr/local/bin/chromedriver
+#Downloads chromedriver     
+
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
+    && apt-get update \
+    && apt-get install google-chrome-stable -y -q    
+#Downloads google chrome and updates associated package    
+
+RUN apt-get install software-properties-common -y \
+    && add-apt-repository -y ppa:mozillateam/firefox-next \
+    && apt-get install -y -q iceweasel
+#Obtains package, downloads firefox, installs iceweasel
+
+ADD virtuoso-skelton /
+# Adds test files
+
+ENV DISPLAY :99
+#Configures xvfb
+
+VOLUME /root/.m2
+#Uses local host files
+
+ADD xvfb.sh /
+#Adds xvfb file for display
+
+CMD . /xvfb.sh && mvn clean test
+#Executes xvfb and begins build
