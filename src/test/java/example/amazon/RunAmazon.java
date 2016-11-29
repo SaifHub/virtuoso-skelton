@@ -7,7 +7,6 @@ package example.amazon;
 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
-import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 	@RunWith(CucumberWithSerenity.class)

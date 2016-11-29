@@ -1,19 +1,21 @@
 # @author: ABDUL SAIF
-# @date  : 25/11/2016-15/11/2016
+# @date  : 25/11/2016-29/11/2016
 
-image: adrianchan/maven-xvfb
+image: saifabs/chocolate
 
 before_script:
-  - service xvfb start
+  - . /xvfb.sh
 
 stages:
   - test
 
 test:
   script:
-    - mvn clean test
+    - mvn clean verify
+
   artifacts:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
     paths:
-    - virtuoso-test-results/*.json
+    - target/site/jacoco/index.html
+    - target/site/serenity/index.html
     expire_in: 1 week

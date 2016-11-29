@@ -15,43 +15,51 @@ public class StepDefinitionS {
 
     //ALL METHODS below are glued to FEATURES available within amazonS.feature
     @Given("^I open Amazon$")
-    public void iOpenAmazon()  {
+    public void iOpenAmazon()
+    {
         homePageS.open();
     }
 
     //DEFINITONS below have METHODS available within HomePageS.java
     @When("^I search for '(.*)'$")
-    public void iSearchFor(String actionName) {
+    public void iSearchFor(String actionName)
+    {
         homePageS.search(actionName);
     }
 
     @When("^I select item '(.*)'$")
-    public void iSelectItem(String actionName) {
+    public void iSelectItem(String actionName)
+    {
         homePageS.selectItem();
     }
 
     @When("^I add 'echo' into basket$")
-    public void iAddIntoBasket() {
+    public void iAddIntoBasket()
+    {
         homePageS.basket();
     }
 
     @When("^I decline add-on$")
-    public void iDeclineAddon() {
+    public void iDeclineAddon()
+    {
         homePageS.declineAddOn();
     }
 
     @When("^I checkout the cart$")
-    public void iCheckTheCart() {
+    public void iCheckTheCart()
+    {
         homePageS.cart();
     }
 
     @When("^I proceed to checkout$")
-    public void iProceedToCheckout() {
+    public void iProceedToCheckout()
+    {
         homePageS.checkout();
     }
 
     @Then("^I check sign-in$")
-    public void iCheckSignIn() {
+    public void iCheckSignIn()
+    {
         homePageS.signIn();
     }
 
