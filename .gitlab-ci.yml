@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # @author: ABDUL SAIF
 # @date  : 29/11/2016
 
@@ -20,3 +21,13 @@ test:
     - target/site/jacoco/*
     - target/site/serenity/*
     expire_in: 1 week
+=======
+image: kaiwinter/docker-java8-maven
+stages:
+  - test
+  - coverage
+test:
+ script: "mvn clean test"
+coverage:
+ script: "mvn jacoco:report"
+>>>>>>> 2beba4862217ff97589258f5f649ad7eee1d6cdf

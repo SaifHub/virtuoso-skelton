@@ -114,6 +114,7 @@
                     </execution>
                 </executions>
             </plugin>
+<<<<<<< HEAD
             <!--C-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -185,6 +186,28 @@
                 <!--</configuration>-->
             <!--</plugin>-->
 
+=======
+			<plugin>
+				 <groupId>org.jacoco</groupId>
+				 <artifactId>jacoco-maven-plugin</artifactId>
+				 <version>0.7.5.201505241946</version>
+				 <executions>
+					<execution>
+					   <id>pre-unit-test</id>
+					   <goals>
+						  <goal>prepare-agent</goal>
+					   </goals>
+					</execution>
+					<execution>
+					   <id>post-unit-test</id>
+					   <phase>test</phase>
+					   <goals>
+						  <goal>report</goal>
+					   </goals>
+					</execution>
+				 </executions>
+			</plugin>
+>>>>>>> 2beba4862217ff97589258f5f649ad7eee1d6cdf
         </plugins>
         <!--END of PLUGINS-->
     </build>
