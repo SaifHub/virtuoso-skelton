@@ -1,7 +1,7 @@
 image: lmear/fred:v2
 
-services:
-  - selenium/hub
+#services:
+#  - selenium/hub
   
 
 before_script:
@@ -15,5 +15,5 @@ test:
   artifacts:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
     paths:
-    - target/sit/jacoco/*.html
+    - target/site/jacoco/*.html
     expire_in: 1 week
