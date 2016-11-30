@@ -1,13 +1,15 @@
 image: juliatucker94/jtuckertag
 
-before_script: 
+before_script:
   - . /xvfb.sh
+
 stages:
   - test
-  test:
- script: "mvn clean test"
+test:
+  script: "mvn clean test"
+
 artifacts:
-     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
-     paths:
-     - target/site/jacoco/*.html
-     expire_in: 1 week
+  name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
+  paths:
+  - target/site/jacoco/*.html
+  expire_in:  1 week
