@@ -5,7 +5,7 @@ Feature: Application Version Identification
   I want to identify the version that is deployed
   So that I can assert compatibility of services
   
-@regression
+@Rest
   Scenario: Visit webpage
     When I visit the given "https://www.amazon.co.uk/argage"
     Then the responce status "404" is returned

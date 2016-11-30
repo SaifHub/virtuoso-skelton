@@ -8,11 +8,12 @@ import example.wikipedia.RunWikipedia;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runners.Suite;
+import RESTTesting.PhilUtils;
 import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class, RunBrowser.class, RunRESTtesting.class})
+@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class, RunBrowser.class, RunRESTtesting.class, PhilUtils.class})
 
 public class RunAllExamples extends SuiteRunner{
 
