@@ -11,9 +11,9 @@ stages:
   - test
     
 test:
-  script: "mvn clean test jacoco:report"
+  script: "mvn clean test"
   artifacts:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
     paths:
-    - virtuoso-test-results/*.json
+    - target/sit/jacoco/*.html
     expire_in: 1 week
