@@ -9,8 +9,8 @@ MAINTAINER Abdul Saif <Saif.Abdul@qa.com>
 RUN apt-get update && apt-get install -y -q unzip xvfb
 
 # DOWNLOADS and UNZIPS the chromedriver required for the Google Chrome browser
-RUN wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_mac64.zip \
-    && unzip chromedriver_mac64.zip -d /usr/local/bin && rm chromedriver_mac64.zip \
+RUN wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux64.zip \
+    && unzip chromedriver_linux64.zip -d /usr/local/bin && rm chromedriver_linux64.zip \
     && chmod +x /usr/local/bin/chromedriver
 
 # DOWNLOADS authorisation key needed to INSTALL Google Chrome and UPDATE associated packages
@@ -25,13 +25,21 @@ RUN apt-get install software-properties-common -y \
     && apt-get install -y -q iceweasel
 
 # ADDS test files
-ADD virtuoso-skelton /
+# ADD virtuoso-skelton /
 
 # CONFIGURES xvfb
 ENV DISPLAY :99
 
 # USES local host files
 VOLUME /root/.m2
+
+# CREATE test directory
+RUN mkdir test
+# MOUNT test directory to local disk
+VOLUME /test
+
+# WHEN container start, already within test directory (e.g. similar to cd ..)
+WORKDIR /test
 
 # ADDS xvfb file for display
 ADD xvfb.sh /
