@@ -1,5 +1,5 @@
 # @author: ABDUL SAIF
-# @date  : 29/22/2016
+# @date  : 30/11/2016
 
 FROM maven:3.3.9-jdk-8
 
@@ -33,16 +33,17 @@ ENV DISPLAY :99
 # USES local host files
 VOLUME /root/.m2
 
-# CREATE test directory
+# CREATE 'test' directory
 RUN mkdir test
-# MOUNT test directory to local disk
+
+# MOUNT 'test' directory to local disk
 VOLUME /test
 
-# WHEN container start, already within test directory (e.g. similar to cd ..)
+# WHEN container starts; already within test directory (e.g. similar to cd ..)
 WORKDIR /test
 
 # ADDS xvfb file for display
 ADD xvfb.sh /
 
-#EXECUTES xvfb and begins build
+# EXECUTES xvfb and begins build
 CMD . /xvfb.sh && mvn clean test

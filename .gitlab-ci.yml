@@ -1,5 +1,5 @@
 # @author: ABDUL SAIF
-# @date  : 25/11/2016-29/11/2016
+# @date  : 29/11/2016
 
 image: saifabs/chocolate
 
@@ -17,6 +17,6 @@ test:
   artifacts:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
     paths:
-    - target/site/jacoco/index.html
-    - target/site/serenity/index.html
+    - target/site/jacoco/*
+    - target/site/serenity/*
     expire_in: 1 week
