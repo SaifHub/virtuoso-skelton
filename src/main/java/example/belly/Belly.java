@@ -6,7 +6,9 @@ package example.belly;
  *
  */
 
-public class Belly {
+import net.serenitybdd.core.pages.PageObject;
+
+public class Belly extends PageObject{
 
     private int cukes;
 
@@ -14,12 +16,15 @@ public class Belly {
             this.cukes = cukes;
         }
 
-        protected String getSound(int waitingTime) {
-            if (cukes > 41 && waitingTime >= 1) {
+        protected String getSound(int waitingTime)
+        {
+            if (cukes > 41 && waitingTime >= 1)
+            {
                 return "growl";
-            } else {
-                return "silent";
-            }
+            } else
+                {
+                    return "silent";
+                }
         }
 
 }
