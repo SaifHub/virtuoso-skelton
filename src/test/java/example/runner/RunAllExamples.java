@@ -3,6 +3,7 @@ package example.runner;
 import example.amazon.RunAmazon;
 import example.belly.RunBelly;
 import example.browser.RunBrowser;
+import example.homeoffice.RunHomeoffice;
 import example.serenity.RunAmazonS;
 import example.wikipedia.RunWikipedia;
 
@@ -13,7 +14,7 @@ import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBrowser.class, RunBelly.class, RunWikipedia.class, RunAmazon.class, RunAmazonS.class})
+@Suite.SuiteClasses({RunBrowser.class, RunBelly.class, RunWikipedia.class, RunAmazon.class, RunHomeoffice.class, RunAmazonS.class})
 
 public class RunAllExamples extends SuiteRunner{
 

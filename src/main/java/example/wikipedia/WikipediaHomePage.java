@@ -15,13 +15,15 @@ import org.openqa.selenium.Keys;
 public class WikipediaHomePage extends PageObject {
 
     //ATTRIBUTES by ID
+    String SEARCH = "#searchInput";
+
     String CHECK = "#firstHeading";
 
     //METHODS
-    //1. SEARCH for input
+    //1. INSERT text and then ENTER
     public void search(String actionName)
     {
-        $("#searchInput").type(actionName).then().sendKeys(Keys.ENTER);
+        $(SEARCH).type(actionName).then().sendKeys(Keys.ENTER);
     }
 
     //2. CHECK the page has loaded correctly
