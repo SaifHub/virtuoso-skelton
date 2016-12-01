@@ -13,8 +13,8 @@ import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class, RunBrowser.class, RunRESTtesting.class})
-//, PhilUtils.class
+@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class, RunRESTtesting.class})
+//, PhilUtils.class, , RunBrowser.class
 public class RunAllExamples extends SuiteRunner{
 
     @BeforeClass
