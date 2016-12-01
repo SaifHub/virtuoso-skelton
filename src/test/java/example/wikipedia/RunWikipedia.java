@@ -2,16 +2,14 @@ package example.wikipedia;
 
 /*
 * @name : ABDUL SAIF
-* @date : 24/11/2016
+* @date : 01/12/2016
 */
 
-import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
+import org.junit.runner.RunWith;
 
     @RunWith(CucumberWithSerenity.class)
-    @CucumberOptions(features = "src/test/resources/features/wikipedia/wikipedia.feature",
-            format = {"pretty", "html:virtuoso-test-results/wikipedia", "json:virtuoso-test-results/wikipedia.json"}
-                    , tags = {"@virtuoso"})
+    @CucumberOptions(features = {"src/test/resources/features/wikipedia/wikipedia.feature"})
 
     public class RunWikipedia {} // END of RunWikipedia

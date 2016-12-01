@@ -1,6 +1,6 @@
 
 # @author ABDUL SAIF
-# @date	  24/11/2016
+# @date	  01/12/2016
 
 @virtuoso
 Feature: Wikipedia searching
@@ -8,17 +8,14 @@ Feature: Wikipedia searching
   I want to use Wikipedia
   So that I find information on topics of interest
 
-  Background:
+  Scenario Outline: Wikipedia search
     Given the Wikipedia site is accessed
+    When I search for '<Item>'
+    Then I check results
 
-  Scenario Outline:
-    When searching for "<Term>"
-    Then the returned page contains the "<Term>" header
-
-    Examples:
-      | Term      	   |
-      | Computing 	   |
-      | United Kingdom |
-      | Apple          |
-      
+  Examples:
+  | Item      	   |
+  | Computing 	   |
+  | United Kingdom |
+  | Apple          |
 
