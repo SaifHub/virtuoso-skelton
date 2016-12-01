@@ -1,4 +1,4 @@
-@restall
+
 @appversion
 Feature: Application Version Identification
   As an administrator of the Mock Authentication service
