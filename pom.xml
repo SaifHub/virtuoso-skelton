@@ -187,7 +187,6 @@
                     <!--</systemPropertyVariables>-->
                 <!--</configuration>-->
             <!--</plugin>-->
-
         </plugins>
         <!--END of PLUGINS-->
     </build>
