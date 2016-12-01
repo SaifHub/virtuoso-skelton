@@ -181,7 +181,10 @@
                 <!--<artifactId>maven-surefire-plugin</artifactId>-->
                 <!--<version>${surefire.version}</version>-->
                 <!--<configuration>-->
-                    <!--<skipTests>true</skipTests>-->
+                    <!--<argLine>-Xmx1024m</argLine>-->
+                    <!--<systemPropertyVariables>-->
+                    <!--<serenity.browser.width>1280</serenity.browser.width>-->
+                    <!--</systemPropertyVariables>-->
                 <!--</configuration>-->
             <!--</plugin>-->
 
