@@ -1,4 +1,4 @@
-image: amichael/yolo
+image: amichael/yolo2
 
 before_script: 
   - . /xvfb.sh
