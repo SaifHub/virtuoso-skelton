@@ -11,7 +11,7 @@ stages:
 
 test:
   script:
-    - mvn clean verify
+    - mvn clean verify -q
     - ls -lrt
 
   artifacts:
