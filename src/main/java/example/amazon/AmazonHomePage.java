@@ -19,7 +19,7 @@ public class AmazonHomePage extends BasePage
 	  /**
 	   * Method comment...
 	   */
-	private static final PageElement ITEM = PageElement.byXpath("//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/a/h2","");
+	private static final PageElement ITEM = PageElement.byXpath("//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/div[1]/a/h2","");
 	
 	  /**
 	   * Method comment...
