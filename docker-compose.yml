@@ -1,20 +1,18 @@
-version: '2'
-services:
-  selenium_hub:
-   image: selenium/hub
-   ports:
-   - 4444:4444
+seleniumhub:
+ image: selenium/hub
+ ports:
+ - 4444:4444
 
-  firefoxnode:
-   image: selenium/node-firefox
-   ports:
-   - 5900
-   links:
-   - selenium/hub
+firefoxnode:
+ image: selenium/node-firefox
+ ports:
+ - 5900
+ links:
+ - seleniumhub:hub
 
-  chromenode:
-   image: selenium/node-chrome
-   ports:
-   - 5900
-   links:
-   - selenium/hub
+chromenode:
+ image: selenium/node-chrome
+ ports:
+ - 5900
+ links:
+ - seleniumhub:hub
