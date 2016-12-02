@@ -6,7 +6,7 @@ before_script:
 stages:
   - test
 test:
-  script: "mvn clean test"
+  script: "mvn clean test -q"
   artifacts:
    name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
    paths:
