@@ -14,7 +14,7 @@ import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class, RunHomeoffice.class, RunAmazonS.class})
+@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunHomeoffice.class, RunAmazonS.class})
 
 public class RunCukeTest extends SuiteRunner{
 
