@@ -6,6 +6,11 @@ image: saifabs/chocolate
 before_script:
   - . /xvfb.sh
 
+  cache:
+  untracked: true
+  paths:
+  - binaries/
+
 stages:
   - test
 
