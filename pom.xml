@@ -184,7 +184,6 @@
                     <!--<skipTests>true</skipTests>-->
                 <!--</configuration>-->
             <!--</plugin>-->
-
         </plugins>
         <!--END of PLUGINS-->
     </build>
