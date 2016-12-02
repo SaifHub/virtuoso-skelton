@@ -1,6 +1,5 @@
 package example.runner;
 
-import example.amazon.RunAmazon;
 import example.belly.RunBelly;
 import example.homeoffice.RunHomeoffice;
 import example.serenity.RunAmazonS;
@@ -28,9 +27,9 @@ public class RunCukeTest extends SuiteRunner{
     public final static void tearDown() {
         System.out.println(LocalDateTime.now() + ": Testing completed");
     }
-    
+
     @Test
 	protected void code() {
 		assertEquals(" "," ");
-	}  
+	}
 }

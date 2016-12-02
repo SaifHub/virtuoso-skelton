@@ -1,22 +1,23 @@
 //package example.runner;
-//
 //import cucumber.api.CucumberOptions;
 //import cucumber.api.junit.Cucumber;
 //import net.serenitybdd.cucumber.CucumberWithSerenity;
+//import net.serenitybdd.junit.runners.SerenityRunner;
 //import org.junit.runner.RunWith;
-//import uk.gov.homeoffice.virtuoso.framework.bdd.IntegratedCucumber;
 //
-////RUNNER file
-//@RunWith(IntegratedCucumber.class)
+//
+//@RunWith(SerenityRunner.class)
 //@CucumberOptions(
 //        features = "src/test/resources/features/",
 //        format = {"pretty", "html:virtuoso-test-results/cucumber", "json:virtuoso-test-results/cucumber.json"},
 //        tags = "@virtuoso",
 //        glue = {
-//                "example.amazon",
 //                "example.belly",
+//                "example.browser",
+//                "example.homeoffice",
+//                "example.REST",
+//                "example.serenity",
 //                "example.wikipedia"}
 //                )
 //
-//public class RunCucumberTest {
-//}
+//public class RunSerenityTest {} // END of RunSerenityTest

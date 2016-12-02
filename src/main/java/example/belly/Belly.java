@@ -3,7 +3,6 @@ package example.belly;
 /**
  * @author : ABDUL SAIF
  * @date   : 10/11/2016
- *
  */
 
 import net.serenitybdd.core.pages.PageObject;

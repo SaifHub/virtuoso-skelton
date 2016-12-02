@@ -1,12 +1,10 @@
 package example.runner;
 
-import example.amazon.RunAmazon;
 import example.belly.RunBelly;
 import example.browser.RunBrowser;
 import example.homeoffice.RunHomeoffice;
 import example.serenity.RunAmazonS;
 import example.wikipedia.RunWikipedia;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runners.Suite;

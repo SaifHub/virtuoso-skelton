@@ -2,7 +2,7 @@ package example.homeoffice;
 
 /**
  * @author : ABDUL SAIF
- * @date   : 24/11/2016
+ * @date   : 01/12/2016
  */
 
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -16,7 +16,6 @@ import org.openqa.selenium.Keys;
 
 public class HomeofficeHomePage extends PageObject{
 
-
     //ATTRIBUTES by ID
     String USERNAME = "#cred1";
 
@@ -29,7 +28,7 @@ public class HomeofficeHomePage extends PageObject{
     @FindBy(xpath="//*[@id='js-live-search-results']/li[1]/h3/a")
     WebElementFacade SELECTLINK;
 
-    @FindBy(xpath="//*[@id=\"get-started\"]/a\n")
+    @FindBy(xpath="//*[@id='get-started']/a\n")
     WebElementFacade STARTNOW;
 
 

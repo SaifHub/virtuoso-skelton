@@ -176,17 +176,19 @@
                 </executions>
             </plugin>
 
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-surefire-plugin</artifactId>-->
-                <!--<version>${surefire.version}</version>-->
-                <!--<configuration>-->
-                    <!--<argLine>-Xmx1024m</argLine>-->
-                    <!--<systemPropertyVariables>-->
-                    <!--<serenity.browser.width>1280</serenity.browser.width>-->
-                    <!--</systemPropertyVariables>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <argLine>-Xmx1024m</argLine>
+                    <systemPropertyVariables>
+                    <serenity.browser.width>1280</serenity.browser.width>
+                        <serenity.browser.height>800</serenity.browser.height>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+
         </plugins>
         <!--END of PLUGINS-->
     </build>
