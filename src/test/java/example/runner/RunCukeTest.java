@@ -2,6 +2,7 @@ package example.runner;
 
 import example.amazon.RunAmazon;
 import example.belly.RunBelly;
+import example.ebay.RunEbay;
 import example.wikipedia.RunWikipedia;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
 
 import java.time.LocalDateTime;
 
-@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class})
+@Suite.SuiteClasses({RunBelly.class, RunWikipedia.class, RunAmazon.class, RunEbay.class})
 
 public class RunCukeTest extends SuiteRunner{
 
