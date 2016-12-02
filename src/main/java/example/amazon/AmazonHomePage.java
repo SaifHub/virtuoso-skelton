@@ -1,17 +1,24 @@
 package example.amazon;
 
 import org.openqa.selenium.Keys;
-
+import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.PageObject;
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.element.PageElement;
-import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
+import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.annotations.DefaultUrl;
 // Test methods for Amazon search
-public class AmazonHomePage extends BasePage{
+@DefaultUrl("http://www.amazon.co.uk")
 
-	private static final PageElement SEARCH = PageElement.byId("twotabsearchtextbox", "");
-	private static final PageElement ITEM = PageElement.byXpath("//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/a/h2", "");
-	private static final PageElement BUTTON = PageElement.byXpath("//*[@id=\"oneTimeBuyBox\"]/div/a/i", "");
-	private static final PageElement BUTTON2 = PageElement.byId("add-to-cart-button","");
+public class AmazonHomePage extends PageObject{
+
+	private static final String SEARCH = "#twotabsearchtextbox";
+	@FindBy(xpath = "//*[@id=\"result_0\"]/div/div/div/div[2]/div[2]/a/h2")
+	WebElementFacade Search;
+	@FindBy (xpath = "//*[@id=\"oneTimeBuyBox\"]/div/a/i")
+	WebElementFacade Checkout;
+	private static final String BUTTON2 = "#add-to-cart-button";
 	public static AmazonHomePage launch(String URL){
 
 		ExecutionContext.getInstance().getPilot().navigateTo(URL);
@@ -22,22 +29,22 @@ public class AmazonHomePage extends BasePage{
 
 	public void EnterSearch(String a){
 
-		pilot.sendKeys(SEARCH, a+Keys.RETURN);
+		$("#twotabsearchtextbox").type(a).then().sendKeys(Keys.ENTER);
 
 	}
 
 	public void SelectLink(){
 
-		pilot.click(ITEM);
+		$(Search).click();
 	}
 
 	public void OneTimePurchase(){
 
-		pilot.click(BUTTON);
+		$(Checkout).click();
 	}
 
 	public void AddToBasket(){
 
-		pilot.click(BUTTON2);
+		$(BUTTON2).click();
 	}
 }

@@ -1,27 +1,25 @@
 package example.amazon;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import example.amazon.AmazonHomePage;
 import uk.gov.homeoffice.virtuoso.framework.test.SeleniumTest;
-import static java.lang.Thread.sleep;
 
-public class AmazonStepDefinitions extends SeleniumTest{
+public class AmazonStepDefinitions {
 
 	AmazonHomePage amazonHomePage;
 
 
-	@Given("^I am at the site \"([^\"]*)\"$")
-	public void i_am_at_the_site(String URL) throws Throwable {
-		amazonHomePage = AmazonHomePage.launch(URL);
+	@Given("^I open Amazon$")
+	public void IOpenAmazon()
+	{
+		amazonHomePage.open(); 
 	}
 
-	@When("^I search for \"([^\"]*)\"$")
-	public void i_search_for(String arg1) throws Throwable {
+	@When("^I search for '(.*)'$")
+	public void i_search_for(String arg1) {
 		amazonHomePage.EnterSearch(arg1);
-		sleep(5000);
+
 	}
 
 	@When("^I then select the item I wish to buy$")
@@ -38,7 +36,6 @@ public class AmazonStepDefinitions extends SeleniumTest{
 	@Then("^I add the item to my basket$")
 	public void i_add_the_item_to_my_basket() throws Throwable {
 		amazonHomePage.AddToBasket();
-
 	}
 
 }
