@@ -15,9 +15,9 @@ import org.openqa.selenium.Keys;
 public class WikipediaHomePage extends PageObject {
 
     //ATTRIBUTES by ID
-    String SEARCH = "#searchInput";
+    public String SEARCH = "#searchInput";
 
-    String CHECK = "#firstHeading";
+    public String CHECK = "#firstHeading";
 
     //METHODS
     //1. INSERT text and then ENTER

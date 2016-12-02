@@ -1,9 +1,9 @@
 package example.wikipedia;
 
-/*
-* @name : ABDUL SAIF
-* @date : 01/12/2016
-*/
+/**
+ * @author : ABDUL SAIF
+ * @date   : 01/12/2016
+ */
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;

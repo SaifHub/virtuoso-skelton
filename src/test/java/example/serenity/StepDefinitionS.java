@@ -1,9 +1,9 @@
 package example.serenity;
 
-/*
-* @name : ABDUL SAIF
-* @date : 24/11/2016
-*/
+/**
+ * @author : ABDUL SAIF
+ * @date   : 24/11/2016
+ */
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;

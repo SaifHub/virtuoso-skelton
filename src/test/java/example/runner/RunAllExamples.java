@@ -1,5 +1,10 @@
 package example.runner;
 
+/**
+ * @author : ABDUL SAIF
+ * @date   : 02/12/2016
+ */
+
 import example.belly.RunBelly;
 import example.browser.RunBrowser;
 import example.homeoffice.RunHomeoffice;
@@ -9,7 +14,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runners.Suite;
 import uk.gov.homeoffice.virtuoso.framework.runner.SuiteRunner;
-
 import java.time.LocalDateTime;
 
 @Suite.SuiteClasses({RunBrowser.class, RunBelly.class, RunWikipedia.class, RunHomeoffice.class, RunAmazonS.class})

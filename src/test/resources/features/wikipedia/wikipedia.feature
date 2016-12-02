@@ -1,6 +1,6 @@
 
-# @author ABDUL SAIF
-# @date	  01/12/2016
+# @author : ABDUL SAIF
+# @date	  : 01/12/2016
 
 @virtuoso
 Feature: Wikipedia searching
