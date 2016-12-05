@@ -31,7 +31,7 @@ public class EbayHomePage extends PageObject
 
 	public void select() throws IOException
 	{
-		$("//*[@id=\"item3ad4277e1a\"]/h3/a").click();
+		$("//*[@id=\"item4659a1f55f\"]/h3/a").click();
 	}
 
 	public void compare(String arg2) throws IOException
