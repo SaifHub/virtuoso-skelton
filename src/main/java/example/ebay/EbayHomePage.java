@@ -1,5 +1,7 @@
 package example.ebay;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Keys;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -15,23 +17,24 @@ public class EbayHomePage extends PageObject
 		
 	}
 
-	public void auction()
+	public void auction() throws IOException
 	{
 		$("//*[@id=\"cbelm\"]/div[1]/div[2]/a[1]").click();
 	}
+	
 
-	public void time()
+	public void time() throws IOException
 	{
 		$("//*[@id=\"DashSortByContainer\"]/ul[1]/li/a").click();
 		$("//*[@id=\"SortMenu\"]/li[6]/a").click();
 	}
 
-	public void select()
+	public void select() throws IOException
 	{
-		$("//*[@id=\"item3f7067a3ff\"]/h3/a").click();	
+		$("//*[@id=\"item3f7067a3ff\"]/h3/a").click();
 	}
 
-	public void compare(String arg2)
+	public void compare(String arg2) throws IOException
 	{
 		String x = $("//*[@id=\"prcIsum_bidPrice\"]").getValue();
 		double d = Double.parseDouble(x);
@@ -40,15 +43,11 @@ public class EbayHomePage extends PageObject
 		{
 			$("MaxBidId").type(arg2).then().sendKeys(Keys.ENTER);
 		}
-		else
-		{
-			
-		}
 	}
 
-	public void uK()
+	public void uK() throws IOException
 	{
-		$("//*[@id=\"e1-31\"]").click();		
+		$("//*[@id=\"e1-31\"]").click();
 	}
 
 
