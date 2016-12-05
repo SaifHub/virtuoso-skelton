@@ -3,11 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>virtuoso-skeleton</groupId>
     <artifactId>uk.gov.skeleton</artifactId>
-    <version>1.0-SNAPSHOT</version>  
-
+    <version>1.0-SNAPSHOT</version>
     <!--PROPERTIES-->
     <properties>
         <!--A-->
@@ -15,7 +13,7 @@
         <!--F-->
         <failsafe.version>2.19.1</failsafe.version>
         <!--J-->
-    	<jacoco-maven-plugin.version>0.7.7.201606060606</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.7.7.201606060606</jacoco-maven-plugin.version>
         <java-source.version>1.8</java-source.version>
         <java-target.version>1.8</java-target.version>
         <junit.version>4.12</junit.version>
@@ -32,7 +30,6 @@
         <virtuoso.version>1.10.2</virtuoso.version>
     </properties>
     <!--END of PROPERTIES-->
-
     <!--DEPENDENCIES-->
     <dependencies>
         <!--A-->
@@ -61,19 +58,16 @@
             <artifactId>serenity-core</artifactId>
             <version>${serenity.version}</version>
         </dependency>
-
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
             <version>${serenity.cucumber.version}</version>
         </dependency>
-
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
             <version>${serenity.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
@@ -81,8 +75,6 @@
         </dependency>
     </dependencies>
     <!--END of DEPENDENCIES-->
-
-
     <!--REPOSITORIES-->
     <repositories>
         <repository>
@@ -91,7 +83,6 @@
         </repository>
     </repositories>
     <!--END of REPOSITORIES-->
-
     <!--BUILD-->
     <build>
         <!--PLUGINS-->
@@ -175,15 +166,18 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-surefire-plugin</artifactId>-->
-                <!--<version>${surefire.version}</version>-->
-                <!--<configuration>-->
-                    <!--<skipTests>true</skipTests>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <argLine>-Xmx1024m</argLine>
+                    <systemPropertyVariables>
+                        <serenity.browser.width>1280</serenity.browser.width>
+                        <serenity.browser.height>800</serenity.browser.height>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
         </plugins>
         <!--END of PLUGINS-->
     </build>
