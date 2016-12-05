@@ -4,6 +4,7 @@ image: lmear/fred:v2
 #  - selenium/hub
   
 
+
 before_script:
   - . /xvfb.sh
   
