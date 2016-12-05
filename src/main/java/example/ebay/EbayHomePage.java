@@ -31,25 +31,22 @@ public class EbayHomePage extends PageObject
 
 	public void select() throws IOException
 	{
-		$("//*[@id=\"item3f7067a3ff\"]/h3/a").click();
+		$("//*[@id=\"item3ad4277e1a\"]/h3/a").click();
 	}
 
 	public void compare(String arg2) throws IOException
 	{
-		String x = $("//*[@id=\"prcIsum_bidPrice\"]").getValue();
-		double d = Double.parseDouble(x);
-		double e = Double.parseDouble(arg2);
-		if (d <= e)
-		{
-			$("MaxBidId").type(arg2).then().sendKeys(Keys.ENTER);
-		}
+//		String x = $("//*[@id=\"prcIsum_bidPrice\"]").getValue();
+//		double d = Double.parseDouble(x);
+//		double e = Double.parseDouble(arg2);
+//		if (d <= e)
+//		{
+			$("//*[@id=\"MaxBidId\"]").type(arg2).then().sendKeys(Keys.ENTER);
+//		}
 	}
 
 	public void uK() throws IOException
 	{
-		$("//*[@id=\"e1-31\"]").click();
+		$("//*[@id=\"e1-59\"]").click();
 	}
-
-
-
 }
