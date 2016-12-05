@@ -16,4 +16,5 @@ test:
     name: "${CI_BUILD_NAME}_${CI_BUILD_REF_NAME}"
     paths:
     - target/site/jacoco/*.html
+    - target/site/serenity/*.html
     expire_in: 1 week
