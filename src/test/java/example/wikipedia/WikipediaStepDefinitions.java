@@ -20,7 +20,7 @@ public class WikipediaStepDefinitions {
         wikipediaHomePage.open();
     }
 
-    @When("^I search for '(.*)'$")
+    @When("^I search for lists '(.*)'$")
     public void searchingFor(String actionName)
     {
         wikipediaHomePage.search(actionName);

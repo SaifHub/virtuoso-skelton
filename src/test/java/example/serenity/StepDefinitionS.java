@@ -22,7 +22,7 @@ public class StepDefinitionS {
 
     //DEFINITONS below have METHODS available within HomePageS.java
     @When("^I search for '(.*)'$")
-    public void iSearchFor(String actionName)
+    public void iSearchForProduct(String actionName)
     {
         homePageS.search(actionName);
     }

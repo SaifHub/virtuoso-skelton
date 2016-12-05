@@ -13,11 +13,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import uk.gov.homeoffice.virtuoso.framework.ExecutionContext;
 import uk.gov.homeoffice.virtuoso.framework.page.BasePage;
+import net.serenitybdd.core.pages.PageObject;
 
 public class HomePage extends BasePage{
 
 	Logger logger = Logger.getLogger(HomePage.class.getName());
-	
+
     protected static HomePage launch(String URL) {
         ExecutionContext.getInstance().getPilot().navigateTo(URL);
         return new HomePage();
@@ -42,5 +43,5 @@ public class HomePage extends BasePage{
         String useragent = (String)js.executeScript("return navigator.userAgent;");
         logger.log(Level.INFO,"User Agent is "+useragent);
     }
-    
+
 }

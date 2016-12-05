@@ -29,11 +29,10 @@ public class SaifUtils {
         return responseContent;
     }
 
-    protected void resetServiceState() throws Throwable
-    {
-        putRequest("https://www.google.co.uk/?gws_rd=ssl");
-        //http://localhost:8080/mock-auth/api/clean,http://192.168.99.100:8080/mock-auth/api/clean
-    }
+//    protected void resetServiceState() throws Throwable
+//    {
+//        putRequest("https://www.google.co.uk/?gws_rd=ssl");
+//    }
 
     protected void getRequest(String requestStr) throws Throwable
     {
@@ -43,13 +42,13 @@ public class SaifUtils {
         processResponse(client.execute(request));
     }
 
-    protected void putRequest(String requestStr) throws Throwable
-    {
-        HttpClient client = HttpClientBuilder.create().build();
-        HttpPut request = new HttpPut(requestStr);
-        request.addHeader("accept", "application/json");
-        processResponse(client.execute(request));
-    }
+//    protected void putRequest(String requestStr) throws Throwable
+//    {
+//        HttpClient client = HttpClientBuilder.create().build();
+//        HttpPut request = new HttpPut(requestStr);
+//        request.addHeader("accept", "application/json");
+//        processResponse(client.execute(request));
+//    }
 
     protected void processResponse(HttpResponse response) throws Throwable
     {

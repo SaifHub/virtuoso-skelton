@@ -19,13 +19,13 @@ public class HomeofficeStepDefinitions {
         homeofficeHomePage.open();
     }
 
-    @When("^I search for '(.*)'$")
-    public void iSearchForFinance(String actionName)
+    @When("^I look for '(.*)'$")
+    public void i_look_for_finance(String actionName)
     {
         homeofficeHomePage.search(actionName);
     }
 
-    @When("^I select item '(.*)'$")
+    @When("^I select link '(.*)'$")
     public void i_select_item_student_finance_login(String actionName)
     {
         homeofficeHomePage.selectLink(actionName);

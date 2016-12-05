@@ -10,7 +10,7 @@ Feature: Wikipedia searching
 
   Scenario Outline: Wikipedia search
     Given the Wikipedia site is accessed
-    When I search for '<Item>'
+    When I search for lists '<Item>'
     Then I check results
 
   Examples:
