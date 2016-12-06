@@ -3,7 +3,7 @@
 # @date	  : 06/12/2016
 
 @virtuoso
-Feature: Belly
+Feature: Belly and Cukes
 
   @growl
   Scenario: A few cukes

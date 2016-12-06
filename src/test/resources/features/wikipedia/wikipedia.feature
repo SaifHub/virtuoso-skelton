@@ -16,6 +16,5 @@ Feature: Wikipedia searching
   Examples:
   | Item      	   |
   | Computing 	   |
-  | United Kingdom |
   | Apple          |
 
