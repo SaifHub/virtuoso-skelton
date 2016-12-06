@@ -30,6 +30,7 @@
         <surefire.version>2.19.1</surefire.version>
         <!--W-->
         <webdriver.driver>chrome</webdriver.driver>
+        <!--V-->
     </properties>
     <!--END of PROPERTIES-->
 
