@@ -17,7 +17,7 @@ public class Belly extends PageObject{
 
         protected String getSound(int waitingTime)
         {
-            if (cukes > 41 && waitingTime >= 1)
+            if (cukes >= 40 && waitingTime >= 1)
             {
                 return "growl";
             } else

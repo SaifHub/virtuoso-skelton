@@ -12,7 +12,7 @@ import uk.gov.homeoffice.virtuoso.framework.test.BaseTest;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class BellyStepDefinitions extends BaseTest {
+public class BellyStepDefinitions {
 
     private Belly belly;
     private int waitingTime;
