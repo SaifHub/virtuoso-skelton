@@ -3,8 +3,8 @@
 # @date	  : 28/11/2016
 
   @virtuoso
-  Feature: RESTful Fetch
-           As administrator I want to recieve a response
+  Feature: REST Fetch
+           As administrator I want to receive a response
 
   @regression
     Scenario: Visit webpage

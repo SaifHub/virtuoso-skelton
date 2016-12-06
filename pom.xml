@@ -28,6 +28,8 @@
         <serenity.version>1.1.36</serenity.version>
         <slf4j.version>1.7.5</slf4j.version>
         <surefire.version>2.19.1</surefire.version>
+        <!--W-->
+        <webdriver.driver>chrome</webdriver.driver>
     </properties>
     <!--END of PROPERTIES-->
 
@@ -175,6 +177,7 @@
                 <configuration>
                     <argLine>-Xmx1024m</argLine>
                     <systemPropertyVariables>
+                        <webdriver.driver>${webdriver.driver}</webdriver.driver>
                     <serenity.browser.width>1280</serenity.browser.width>
                         <serenity.browser.height>800</serenity.browser.height>
                     </systemPropertyVariables>
