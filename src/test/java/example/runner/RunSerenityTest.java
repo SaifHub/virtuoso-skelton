@@ -18,6 +18,6 @@ import org.junit.runner.RunWith;
         //RUNS features with 'virtuoso' tag
         tags = "@virtuoso",
         //INSERT features that should be run using: mvn clean verify -q ****-Dwebdriver.driver=chrome****
-        glue = {"example.belly", "example.homeoffice", "example.REST", "example.serenity", "example.wikipedia"})
+        glue = {"example.belly", "example.homeoffice", "example.REST", "example.wikipedia"})
 
 public class RunSerenityTest {} // END of RunSerenityTest
